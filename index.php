@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Children's Aid - in assiciation with Atharva Foundation</title>
+  <title>Children's Aid Society- in assiciation with Atharva Foundation</title>
 
   <!-- Font Awesome Icons -->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -30,7 +30,7 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
     <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top">Children's Aid</a>
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">Children's Aid Society</a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -43,10 +43,10 @@
             <a class="nav-link js-scroll-trigger" href="#services">Services</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
+            <a class="nav-link js-scroll-trigger" href="#portfolio">Missing Children</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+            <a class="nav-link js-scroll-trigger" href="#contact">Contact Us</a>
           </li>
         </ul>
       </div>
@@ -58,12 +58,12 @@
     <div class="container h-100">
       <div class="row h-100 align-items-center justify-content-center text-center">
         <div class="col-lg-10 align-self-end">
-          <h1 class="text-uppercase text-white font-weight-bold">Children's Aid</h1>
+          <h1 class="text-uppercase text-white font-weight-bold">Children's Aid Society</h1>
           <hr class="divider my-4">
         </div>
         <div class="col-lg-8 align-self-baseline">
           <p class="text-white-75 font-weight-light mb-5">Your one step can change the life of a child!</p>
-          <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a>
+          <!-- <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a> -->
         </div>
       </div>
     </div>
@@ -77,7 +77,7 @@
           <h2 class="text-white mt-0">We've got what you need!</h2>
           <hr class="divider light my-4">
           <p class="text-white mb-4">Submit the details of a child that you see is unattended or in danger and we will take care of the rest</p>
-          <a class="btn btn-light btn-xl js-scroll-trigger" href="#services">Get Started!</a>
+          <a class="btn btn-light btn-xl js-scroll-trigger" href="data_form.php">Fill the form</a>
         </div>
       </div>
     </div>
