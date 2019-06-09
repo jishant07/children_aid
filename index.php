@@ -62,8 +62,7 @@
           <hr class="divider my-4">
         </div>
         <div class="col-lg-8 align-self-baseline">
-          <p class="text-white-75 font-weight-light mb-5">Your one step can change the life of a child!</p>
-          <!-- <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a> -->
+          <p class="text-white-75 font-weight-light mb-5">Your one step can change the life of a child!</p>s
         </div>
       </div>
     </div>
