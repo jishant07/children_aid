@@ -65,7 +65,8 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #212529;
+  /*color: #212529;*/
+  color:rgb(13, 14, 15);
   text-align: left;
   background-color: #fff;
 }
