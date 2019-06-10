@@ -28,18 +28,30 @@
 		width:100%;
 		padding:10px;
 	}
+	.container
+	{
+		width:80% !important;
+	}
 </style>
 </head>
 <body>
 	<br>
-	<div class="container-fluid">
+	<div class="container-fluid" id="banner" style="display: none;">
 		<div class="jumbotron" style="background:#fd7e14;color:white;margin:auto;">
 			<h1>Add the details here.</h1>
 		</div>
 	</div>
-	<div class="container">
+	<br>
+	<!-- Loading Screen -->
+	<div id="loading" class="container">
+		<img src="./img/loader.gif">	
+	</div>
+	<!-- Main Page -->
+	<div id="main" style="display: none;">
+	<!-- Part 1 Starts -->
+	<form>
+	<div class="container" id="part1">
 		<br>
-		<form>
 			<div class="row">
 				<div class="col-lg-3"><input type="text" name="name" placeholder="Name"></div>
 				<div class="col-lg-3"><input type="text" name="file_number" placeholder="File Number"></div>
@@ -68,7 +80,7 @@
 				</div>
 				<div class="col-lg-3"><input type="number" name="age" placeholder="Age">
 				</div>
-				<div class="col-lg-3"><input type="date" name="date_of_birth" placeholder="Date of Birth"></div>
+				<div class="col-lg-3">Date of Birth<input type="date" name="date_of_birth"></div>
 			</div>
 			<br>
 			<div class="row">
@@ -86,7 +98,7 @@
 				<div class="col-lg-3">
 					<select name="eye_color">
 						<option selected disabled>Select an Eye Colour</option>
-						<option>Balck</option>
+						<option value="Black">Balck</option>
 						<option>Brown</option>
 						<option>Green</option>
 						<option>Hazel</option>
@@ -113,6 +125,14 @@
 				</div>
 			</div>
 			<br>
+			<a id="show_part_2">Show Part 2</a>
+			<br>
+	</div>
+	<!-- Part 1 Ends -->
+
+	<!-- Part 2 Startes -->
+	<div class="container" id="part2" style="display:none;">
+			<br>
 			<div class="row">
 				<div class="col-lg-3">
 					<select name="lip_type">
@@ -136,9 +156,9 @@
 				</div>
 			</div>
 			<br>
-			<a id="add_language" style="text-align:left;float:left;">Add Language</a>
 			<div class="row">
 				<div class="col-lg-3">
+					<a id="add_language" style="text-align:left;float:left;">Add Language</a>
 					<input type="text" name="other_languages[]" placeholder="Other Languages">
 				</div>
 				<div class="col-lg-3">
@@ -148,7 +168,8 @@
 					<input type="text" name="socio_economic_class" placeholder="Socio Economic Class">
 				</div>
 				<div class="col-lg-3">
-					<select name="lit_level">
+					<label>Literacy level</label>
+					<select name="lit_level" placeholder="Literacy Level">
 						<option>High</option>
 						<option>Medium</option>
 						<option>Low</option>
@@ -184,13 +205,20 @@
 					</select>
 				</div>
 				<div class="col-lg-3">
-					<input type="date" name="date_of_custody" placeholder="Date of Custody">
+					Date of Custody<input type="date" name="date_of_custody" placeholder="Date of Custody">
 				</div>
 				<div class="col-lg-3">
-					<input type="date" name="date_of_admission" placeholder="Date of Addmission">
+					Date of Addmission<input type="date" name="date_of_admission" placeholder="Date of Addmission">
 				</div>
 			</div>
 			<br>
+			<a id="show_part_3">Show Part 3</a>
+	</div>
+	<!-- Part 2 Ends -->
+
+	<!-- Part 3 Starts -->
+	<div class="container" id="part3" style="display:none;">
+		<br>
 			<div class="row">
 				<div class="col-lg-3">
 					<select name="is_repeater">
@@ -200,7 +228,7 @@
 					</select>
 				</div>
 				<div class="col-lg-3">
-					<input type="date" name="date_of_discharge" placeholder="Date of Discharge">
+					Date of Discharge <input type="date" name="date_of_discharge" placeholder="Date of Discharge">
 				</div>
 				<div class="col-lg-3">
 					<input type="text" name="prev_institution" placeholder="Previous Institution">
@@ -210,18 +238,18 @@
 				</div>
 			</div>
 			<br>
-			<button id="add_medical_row"></button>
 			<div class="row">
-				<div class="col-lg-4"><h3>Medical</h3>
+				<div class="col-lg-3"><a id="add_mediacal_details">Add</a></div>
+				<div class="col-lg-3"><h3>Medical</h3>
 				<br><input type="text" name="medical[]"></div>
-				<div class="col-lg-4"><h3>Psychological</h3>
+				<div class="col-lg-3"><h3>Psychological</h3>
 				<br><input type="text" name="psychological[]"></div>
-				<div class="col-lg-4"><h3>Psychiatric</h3>
+				<div class="col-lg-3"><h3>Psychiatric</h3>
 				<br><input type="text" name="psychiatric[]"></div>
 			</div>
-			<br>
-		</form>
-	</div>
+		</div>
+	</form>
+	<!-- Part 3 Ends -->
 </body>
 <script src="vendor/jquery/jquery.min.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -231,6 +259,57 @@
 <!-- Custom scripts for this template -->
 <script src="js/creative.min.js"></script>
 <script type="text/javascript">
-	
+	$(document).ready(function()
+	{
+		setTimeout(function() {
+    		$('#loading').fadeOut("fast",function()
+    		{
+    			$('#main').fadeIn("fast","swing");
+    			$('#banner').fadeIn("fast","swing");
+    		});
+    	}, 1000);
+	});
+	$('#show_part_2').on("click",function()
+	{
+		$('#main').fadeOut("fast",function()
+		{
+			$('#loading').fadeIn("fast",function()
+			{
+					setTimeout(function() {
+    				$('#loading').fadeOut("fast",function()
+    				{
+						$('#part1').fadeOut("fast",function()
+						{
+							$('#part2').fadeIn("fast",function()
+							{
+								$('#main').fadeIn("fast","swing");
+							});
+						});   			
+    				});
+    			}, 300);
+			})
+		})
+	});
+	$('#show_part_3').on("click",function()
+	{
+		$('#main').fadeOut("fast",function()
+		{
+			$('#loading').fadeIn("fast",function()
+			{
+					setTimeout(function() {
+    				$('#loading').fadeOut("fast",function()
+    				{
+						$('#part2').fadeOut("fast",function()
+						{
+							$('#part3').fadeIn("fast",function()
+							{
+								$('#main').fadeIn("fast","swing");
+							});
+						});   			
+    				});
+    			}, 300);
+			})
+		})
+	});
 </script>
 </html>

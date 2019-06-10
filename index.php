@@ -62,7 +62,7 @@
           <hr class="divider my-4">
         </div>
         <div class="col-lg-8 align-self-baseline">
-          <p class="text-white-75 font-weight-light mb-5">Your one step can change the life of a child!</p>s
+          <p class="text-white-75 font-weight-light mb-5">Your one step can change the life of a child!</p>
         </div>
       </div>
     </div>
