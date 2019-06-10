@@ -32,6 +32,19 @@
 	{
 		width:80% !important;
 	}
+	a
+	{
+		height:10px;
+		border:2px solid orange;
+		background: red;
+		padding:5px;
+		color:black;
+	}
+	a:hover
+	{
+		color:orange;
+		background: red;
+	}
 </style>
 </head>
 <body>
@@ -43,13 +56,15 @@
 	</div>
 	<br>
 	<!-- Loading Screen -->
-	<div id="loading" class="container">
-		<img src="./img/loader.gif">	
+	<div class="container">
+		<div id="loading">
+			<img src="./img/loader.gif">	
+		</div>
 	</div>
 	<!-- Main Page -->
 	<div id="main" style="display: none;">
 	<!-- Part 1 Starts -->
-	<form>
+	<form action="POST" action="./data_save.php">
 	<div class="container" id="part1">
 		<br>
 			<div class="row">
@@ -238,18 +253,47 @@
 				</div>
 			</div>
 			<br>
+			<a id="add_mediacal_details" style="text-align:left;float:left;">Add</a>
+			<br>
+			<br>
 			<div class="row">
-				<div class="col-lg-3"><a id="add_mediacal_details">Add</a></div>
-				<div class="col-lg-3"><h3>Medical</h3>
-				<br><input type="text" name="medical[]"></div>
-				<div class="col-lg-3"><h3>Psychological</h3>
-				<br><input type="text" name="psychological[]"></div>
-				<div class="col-lg-3"><h3>Psychiatric</h3>
-				<br><input type="text" name="psychiatric[]"></div>
+				<div class="col-lg-4" id="medical"><h3>Medical</h3>
+				<br>
+				</div>
+				<div class="col-lg-4" id="psychological"><h3>Psychological</h3>
+				<br>
+				</div>
+				<div class="col-lg-4" id="psychiatric"><h3>Psychiatric</h3>
+				<br>
+				</div>
 			</div>
+			<span id='rem_medical_det'><a style="text-align:right;float:right;">Remove</a></span>
+			<br>
+			<br>
+			<a id="show_part_4">Show Part 4</a>
+		</div>
+		<!-- Part 3 Ends -->
+
+		<!-- Part 4 Starts -->
+		<div class="container" id="part4" style="display: none;">
+			<br>
+			<div class="col-lg-3">
+				<textarea name="nature_dod" placeholder="Nature and Date of Disposal"></textarea>
+			</div>
+			<div class="col-lg-3">
+				<textarea name="observation" placeholder="Observation"></textarea>
+			</div>
+			<div class="col-lg-3">
+				<textarea name="pre_problem" placeholder="Present Problem"></textarea>
+			</div>
+			<div class="col-lg-3">
+				<textarea name="agg_cir" placeholder="Aggravating Circumstances"></textarea>
+			</div>
+			<br>
+			<br>
+			<button value="Submit">Submit</button>
 		</div>
 	</form>
-	<!-- Part 3 Ends -->
 </body>
 <script src="vendor/jquery/jquery.min.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -259,6 +303,7 @@
 <!-- Custom scripts for this template -->
 <script src="js/creative.min.js"></script>
 <script type="text/javascript">
+	var med_count = $('#medical').length;
 	$(document).ready(function()
 	{
 		setTimeout(function() {
@@ -310,6 +355,47 @@
     			}, 300);
 			})
 		})
+	});
+	$('#show_part_4').on("click",function()
+	{
+		$('#main').fadeOut("fast",function()
+		{
+			$('#loading').fadeIn("fast",function()
+			{
+					setTimeout(function() {
+    				$('#loading').fadeOut("fast",function()
+    				{
+						$('#part3').fadeOut("fast",function()
+						{
+							$('#part4').fadeIn("fast",function()
+							{
+								$('#main').fadeIn("fast","swing");
+							});
+						});   			
+    				});
+    			}, 300);
+			})
+		})
+	});
+	$("#add_mediacal_details").on("click",function()
+	{
+		med_count++;
+		$('#medical').append("<br class='med_"+med_count+"'><input type='text' class='med_"+med_count+"' name='medical[]'>");
+		$('#psychological').append("<br class='med_"+med_count+"'><input type='text' class='med_"+med_count+"' name='psychological[]'>");
+		$('#psychiatric').append("<br class='med_"+med_count+"'><input type='text' class='med_"+med_count+"' name='psychiatric[]'>");
+		console.log(med_count);
+	});
+	$(document).on("click","#rem_medical_det",function()
+	{
+		var str = ".med_"+(med_count);
+		$(str).each(function()
+		{
+			$(this).fadeOut(300,function()
+			{
+				$(this).remove();
+			});
+		});
+		med_count--;
 	});
 </script>
 </html>
