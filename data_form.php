@@ -34,16 +34,16 @@
 	}
 	a
 	{
-		height:10px;
-		border:2px solid orange;
+		height:auto;
 		background: red;
-		padding:5px;
-		color:black;
+		color:black !important;
+		padding:10px;
 	}
-	a:hover
+	a:hover 
 	{
-		color:orange;
-		background: red;
+		color:red !important;
+		background:black;
+		transition: 0.3s;
 	}
 </style>
 </head>
@@ -64,7 +64,7 @@
 	<!-- Main Page -->
 	<div id="main" style="display: none;">
 	<!-- Part 1 Starts -->
-	<form action="POST" action="./data_save.php">
+	<form method="post" action="data_save.php">
 	<div class="container" id="part1">
 		<br>
 			<div class="row">
