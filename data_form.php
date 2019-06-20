@@ -383,7 +383,6 @@
 		$('#medical').append("<br class='med_"+med_count+"'><input type='text' class='med_"+med_count+"' name='medical[]'>");
 		$('#psychological').append("<br class='med_"+med_count+"'><input type='text' class='med_"+med_count+"' name='psychological[]'>");
 		$('#psychiatric').append("<br class='med_"+med_count+"'><input type='text' class='med_"+med_count+"' name='psychiatric[]'>");
-		console.log(med_count);
 	});
 	$(document).on("click","#rem_medical_det",function()
 	{
