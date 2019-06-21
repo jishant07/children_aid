@@ -14,6 +14,7 @@
         	}
         	else
         	{
+        		/*Example of data retrival*/
         		echo $res['name'];
         	}
         }
