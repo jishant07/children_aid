@@ -1,11 +1,7 @@
 <?php 
-	$servername = "localhost";
-	$db_name = "children_aid";
-	$user = "root";
-	$pwd = "";
-	$con = mysqli_connect($servername, $user, $pwd, $db_name);
+	require("./database_credentials.php");
 	$data = json_encode($_POST);
-	echo json_encode($_POST);
+	echo $data;
 	$sql = "insert into `children_data`(`added_data`) values ('$data');";
 	$con -> query($sql);
 ?>

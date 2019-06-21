@@ -35,14 +35,17 @@
 	a
 	{
 		height:auto;
-		background: red;
-		color:black !important;
+		background: white;
+		color:black;
+		border:#fd7e14 2px solid;
+		border-radius: 10px;
 		padding:10px;
 	}
 	a:hover 
 	{
 		color:red !important;
-		background:black;
+		background:#ff6a26;
+		color:white !important;
 		transition: 0.3s;
 	}
 </style>
@@ -142,6 +145,8 @@
 			<br>
 			<a id="show_part_2">Show Part 2</a>
 			<br>
+			<br>
+			<br>
 	</div>
 	<!-- Part 1 Ends -->
 
@@ -173,8 +178,14 @@
 			<br>
 			<div class="row">
 				<div class="col-lg-3">
-					<a id="add_language" style="text-align:left;float:left;">Add Language</a>
-					<input type="text" name="other_languages[]" placeholder="Other Languages">
+					<a id="add_language">Add Language</a>
+					<br>
+					<br>
+					<div id="language_div"></div>
+					<br>
+					<a id="remove_language">Remove Language</a>
+					<br>
+					<br>
 				</div>
 				<div class="col-lg-3">
 					<input type="text" name="mother_tongue" placeholder="Mother Tongue">
@@ -213,6 +224,7 @@
 				</div>
 				<div class="col-lg-3">
 					<select name="status">
+						<option disabled selected>Select child status</option>
 						<option>CCL</option>
 						<option>Child Labour</option>
 						<option>Racket</option>
@@ -220,14 +232,19 @@
 					</select>
 				</div>
 				<div class="col-lg-3">
-					Date of Custody<input type="date" name="date_of_custody" placeholder="Date of Custody">
+					Date of Custody
+					<input type="date" name="date_of_custody" placeholder="Date of Custody">
 				</div>
 				<div class="col-lg-3">
-					Date of Addmission<input type="date" name="date_of_admission" placeholder="Date of Addmission">
+					Date of Addmission
+					<input type="date" name="date_of_admission" placeholder="Date of Addmission">
 				</div>
 			</div>
 			<br>
 			<a id="show_part_3">Show Part 3</a>
+			<br>
+			<br>
+			<br>
 	</div>
 	<!-- Part 2 Ends -->
 
@@ -237,6 +254,7 @@
 			<div class="row">
 				<div class="col-lg-3">
 					<select name="is_repeater">
+						<option selected disabled>Select repeater status</option>
 						<option>Yes</option>
 						<option>No</option>
 						<option>Don't know</option>
@@ -271,6 +289,9 @@
 			<br>
 			<br>
 			<a id="show_part_4">Show Part 4</a>
+			<br>
+			<br>
+			<br>
 		</div>
 		<!-- Part 3 Ends -->
 
@@ -303,14 +324,16 @@
 <!-- Custom scripts for this template -->
 <script src="js/creative.min.js"></script>
 <script type="text/javascript">
-	var med_count = $('#medical').length;
 	$(document).ready(function()
 	{
 		setTimeout(function() {
     		$('#loading').fadeOut("fast",function()
     		{
-    			$('#main').fadeIn("fast","swing");
-    			$('#banner').fadeIn("fast","swing");
+    			
+    			$('#banner').fadeIn("fast","swing",function()
+    			{
+    				$('#main').fadeIn("fast","swing");		
+    			});
     		});
     	}, 1000);
 	});
@@ -377,6 +400,7 @@
 			})
 		})
 	});
+	var med_count = $('#medical').length;
 	$("#add_mediacal_details").on("click",function()
 	{
 		med_count++;
@@ -396,5 +420,24 @@
 		});
 		med_count--;
 	});
+	var language_count = $('#language').length;
+	$("#add_language").on("click",function()
+	{
+		language_count++;
+		$("#language_div").append("<input type='text' name='other_languages[]' placeholder='Language' id='language_"+language_count+"'"+">");
+		console.log("From the add_language thing", language_count);
+	});
+	$("#remove_language").on("click",function()
+	{
+		var rem = "#language_"+(language_count);
+		$(rem).each(function()
+		{
+			$(this).fadeOut(300,function()
+			{
+				$(this).remove();
+			});
+		});
+		language_count--;
+	})
 </script>
 </html>

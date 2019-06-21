@@ -37,7 +37,7 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto my-2 my-lg-0">
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#about">About</a>
+            <a class="nav-link js-scroll-trigger" href="#about">Actions</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#services">Services</a>
@@ -77,6 +77,7 @@
           <hr class="divider light my-4">
           <p class="text-white mb-4">Submit the details of a child that you see is unattended or in danger and we will take care of the rest</p>
           <a class="btn btn-light btn-xl js-scroll-trigger" href="data_form.php">Fill the form</a>
+          <a class="btn btn-light btn-xl js-scroll-trigger" href="retrive_data.php">See the Missing Children</a>
         </div>
       </div>
     </div>
