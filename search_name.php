@@ -1,14 +1,7 @@
 <?php include './partials/header.php'; ?>
-	<br>
-	<div class="container-fluid" id="banner">
-		<div class="jumbotron" style="background:#fd7e14;color:white;margin:auto;">
-			<h1>Data Retrival.</h1>
-		</div>
-	</div>
-	<br>
 <?php 
 	require("./partials/database_credentials.php");
-	$sql = "select * from children_data order by `id` desc";
+	$sql = "select * from children_data";
 	$result = $con->query($sql);
 	$count = 0;
 	if($result->num_rows > 0)
@@ -17,7 +10,9 @@
 		{
         	$test = $row["added_data"];
         	$res = json_decode($test,true);
-        	$count++;
+        	if($res['name'] == $_POST['name'])
+        	{
+        		$count = 1;
 ?>
 	<!-- Main Page -->
 	<div id="main">
@@ -584,18 +579,18 @@
 			<!-- <a id="add_mediacal_details" style="text-align:left;float:left;">Add</a> -->
 			<br>
 			<br>
+			<?php 
+				if (!empty($res['medical']))
+				{
+					for ($i=0; $i < count($res['mediacal']) ; $i++) 
+					{ 
+						
+			?>
 			<div class="row">
 				<div class="col-lg-4">Medical</div>
 				<div class="col-lg-4">Psychological</div>
 				<div class="col-lg-4">Psychiatric</div>
 			</div>
-			<?php 
-				if (!empty($res['medical']))
-				{
-					for ($i=0; $i < count($res['medical']) ; $i++) 
-					{ 
-						
-			?>
 			<div class="row">
 				<div class="col-lg-4">
 				<br>
@@ -689,6 +684,11 @@
 	<br>
 	</div>
 	<?php 
+			}
+		}
+		if($count == 0 )
+		{
+			echo "<br><br>Nothing Results Found";	
 		}
 	}
 	else

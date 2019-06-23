@@ -76,10 +76,14 @@
           <h2 class="text-white mt-0">We've got what you need!</h2>
           <hr class="divider light my-4">
           <p class="text-white mb-4">Submit the details of a child that you see is unattended or in danger and we will take care of the rest</p>
-          <a class="btn btn-light btn-xl js-scroll-trigger" href="data_form.php">Fill the form</a>
-          <a class="btn btn-light btn-xl js-scroll-trigger" href="retrive_data.php">See the Missing Children</a>
         </div>
       </div>
+    </div>
+    <div class="row" style="text-align:center;margin:auto;">
+    <div class="col-lg-4">
+      <a class="btn btn-light btn-xl js-scroll-trigger" href="data_form.php">Fill the form</a></div>
+    <div class="col-lg-4"><a class="btn btn-light btn-xl js-scroll-trigger" href="retrive_data.php">See the Missing Children</a></div>
+          <div class="col-lg-4"><a class="btn btn-light btn-xl js-scroll-trigger" href="search.php">Search for a particular child</a></div>
     </div>
   </section>
 

@@ -79,10 +79,10 @@
 			<br>
 			<div class="row">
 				<div class="col-lg-3">
-					<textarea style="width:100%;" placeholder="Permanent Address"></textarea>
+					<textarea style="width:100%;" name="perm_add" placeholder="Permanent Address"></textarea>
 				</div>
 				<div class="col-lg-3">
-					<textarea style="width:100%;" placeholder="Local Address"></textarea>
+					<textarea style="width:100%;" name="loc_add" placeholder="Local Address"></textarea>
 				</div>
 				<div class="col-lg-3">
 					<input type="text" name="tehsil" placeholder="Tehsil">
@@ -196,6 +196,7 @@
 				<div class="col-lg-3">
 					<label>Literacy level</label>
 					<select name="lit_level" placeholder="Literacy Level">
+						<option selected disabled>Select Literacy Level</option>
 						<option>High</option>
 						<option>Medium</option>
 						<option>Low</option>
