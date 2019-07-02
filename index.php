@@ -81,9 +81,14 @@
     </div>
     <div class="row" style="text-align:center;margin:auto;">
     <div class="col-lg-4">
-      <a class="btn btn-light btn-xl js-scroll-trigger" href="data_form.php">Fill the form</a></div>
-    <div class="col-lg-4"><a class="btn btn-light btn-xl js-scroll-trigger" href="retrive_data.php">See the Missing Children</a></div>
-          <div class="col-lg-4"><a class="btn btn-light btn-xl js-scroll-trigger" href="search.php">Search for a particular child</a></div>
+      <a class="btn btn-light btn-xl js-scroll-trigger mb-2" href="data_form.php">Inform about a child</a>
+    </div>
+    <div class="col-lg-4">
+      <a class="btn btn-light btn-xl js-scroll-trigger mb-2" href="retrive_data.php">List of Missing Children</a>
+    </div>
+    <div class="col-lg-4">
+      <a class="btn btn-light btn-xl js-scroll-trigger mb-2" href="search.php">Search for a child</a>
+    </div>
     </div>
   </section>
 

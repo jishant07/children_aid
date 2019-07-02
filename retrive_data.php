@@ -584,30 +584,24 @@
 			<!-- <a id="add_mediacal_details" style="text-align:left;float:left;">Add</a> -->
 			<br>
 			<br>
-			<div class="row">
-				<div class="col-lg-4">Medical</div>
-				<div class="col-lg-4">Psychological</div>
-				<div class="col-lg-4">Psychiatric</div>
-			</div>
 			<?php 
 				if (!empty($res['medical']))
 				{
 					for ($i=0; $i < count($res['medical']) ; $i++) 
-					{ 
-						
+					{ 		
 			?>
 			<div class="row">
 				<div class="col-lg-4">
 				<br>
-					<?php echo "<li>".$res['medical'][$i]."</li>";  ?>
+				Medical	<?php echo "<li>".$res['medical'][$i]."</li>";  ?>
 				</div>
 				<div class="col-lg-4">
 				<br>
-					<?php echo "<li>".$res['psychological'][$i]."</li>";  ?>
+				Psychological	<?php echo "<li>".$res['psychological'][$i]."</li>";  ?>
 				</div>
 				<div class="col-lg-4">
 				<br>
-					<?php echo "<li>".$res['psychiatric'][$i]."</li>";  ?>
+				Psychiatric	<?php echo "<li>".$res['psychiatric'][$i]."</li>";  ?>
 				</div>
 			</div>
 			<?php 
@@ -683,6 +677,7 @@
 			<br>
 			<br>
 		</div>
+	</div>
 	</div>
 	</div>
 	<br>
