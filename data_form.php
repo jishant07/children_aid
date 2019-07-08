@@ -15,6 +15,7 @@
 <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 <!-- Theme CSS - Includes Bootstrap -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 <link href="css/creative.min.css" rel="stylesheet">
 <style type="text/css">
 	*
@@ -87,7 +88,8 @@
 				<div class="col-lg-3">
 					<input type="text" name="tehsil" placeholder="Tehsil">
 				</div>
-				<div class="col-lg-3"><input type="text" name="taluka" placeholder="Taluka">
+				<div class="col-lg-3">
+					<input type="text" name="branch" placeholder="Branch">
 				</div>
 			</div>
 			<br>

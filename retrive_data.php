@@ -122,11 +122,11 @@
 					 ?>
 				</div>
 				<div class="col-lg-3">
-					Taluka : 
+					Branch : 
 					<?php 
-						if ($res['taluka'])
+						if (!empty($res['branch']))
 						{
-							echo $res['taluka'];
+							echo $res['branch'];
 						}
 						else
 						{

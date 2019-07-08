@@ -22,6 +22,7 @@
 
   <!-- Theme CSS - Includes Bootstrap -->
   <link href="css/creative.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 
 </head>
 
@@ -79,7 +80,7 @@
         </div>
       </div>
     </div>
-    <div class="row" style="text-align:center;margin:auto;">
+    <div class="row animated bounce" style="text-align:center;margin:auto;">
     <div class="col-lg-4">
       <a class="btn btn-light btn-xl js-scroll-trigger mb-2" href="data_form.php">Inform about a child</a>
     </div>

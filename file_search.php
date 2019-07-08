@@ -10,7 +10,7 @@
 		{
         	$test = $row["added_data"];
         	$res = json_decode($test,true);
-        	if($res['name'] == $_POST['name'])
+        	if($res['file_number'] == $_POST['file_number'])
         	{
         		$count = 1;
 ?>
