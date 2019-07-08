@@ -691,6 +691,7 @@
 		echo "<h1 style='text-align:center;margin:auto;'>No data present</h1>";
 	}
 ?>
+<div id="result"></div>
 </body>
 <script src="vendor/jquery/jquery.min.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -699,4 +700,17 @@
 <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
 <!-- Custom scripts for this template -->
 <script src="js/creative.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function()
+	{
+		$.ajax({
+			url : "datatable_setting.php",
+			success : function(data)
+			{
+				alert(data);
+				$('#result').html(data);
+			}
+		})
+	});
+</script>
 </html>
