@@ -196,7 +196,7 @@
 	$(document).ready(function()
 	{
 
-		$('#table_id').DataTable({});
+		$('#table_id').DataTable();
 
 		/*$('#table_id').Tabledit({
 			inputClass: 'form-control input-sm',
