@@ -4,8 +4,11 @@
   max-width: none
 }
 </style>
-<div class="">
-	<table id="table_id" class="table table-responsive table-hover table-bordered">
+<div style="padding: 30px;padding-bottom:10px;background:#f4623a;"></div>
+<br>
+
+<div class="container-fluid" style="width:90% !important;">
+	<table id="table_id" class="table table-responsive table-hover table-bordered table-stripped">
 		<!-- <table id="table_id" class="table"> -->
 		<thead>
 			<tr>
@@ -61,7 +64,7 @@
 		<tbody>
 <?php 
 	require("./partials/database_credentials.php");
-	$sql = "select * from children_data order by `id` desc";
+	$sql = "select * from children_data";
 	$result = $con->query($sql);
 	$count = 0;
 	if($result->num_rows > 0)
@@ -188,6 +191,8 @@
 		</tbody>
  	</table>
  </div>
+ <br>
+ <div style="padding: 30px;padding-bottom:10px;background:#f4623a;"></div>
 </body>
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
@@ -198,20 +203,20 @@
 
 		$('#table_id').DataTable();
 
-		/*$('#table_id').Tabledit({
+		$('#table_id').Tabledit({
 			inputClass: 'form-control input-sm',
 			columns: {
         identifier: [0, 'id'],
-        editable: [[1, 'Name'], [2, 'branch'], [3, 'File Number']]
+        editable: [[1, 'name'], [2, 'branch'], [3, 'file_number'], [4, '']]
 		    },
 			buttons: {
 			    edit: {
-			        class: 'btn btn-sm btn-default',
+			        class: 'btn btn-sm btn-primary',
 			        html: '<span class="glyphicon glyphicon-pencil"></span>',
 			        action: 'edit'
 			    },
 			    delete: {
-			        class: 'btn btn-sm btn-default',
+			        class: 'btn btn-sm btn-info',
 			        html: '<span class="glyphicon glyphicon-trash"></span>',
 			        action: 'delete'
 			    },
@@ -266,7 +271,7 @@
 		            }
 		        });
 		    }
-		});*/
+		});
 	});
 </script>
 </html>
