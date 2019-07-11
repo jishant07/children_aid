@@ -80,15 +80,12 @@
         </div>
       </div>
     </div>
-    <div class="row animated bounce" style="text-align:center;margin:auto;">
-    <div class="col-lg-4">
+    <div class="row" style="text-align:center;margin:auto;">
+    <div class="col-lg-6">
       <a class="btn btn-light btn-xl js-scroll-trigger mb-2" href="data_form.php">Inform about a child</a>
     </div>
-    <div class="col-lg-4">
-      <a class="btn btn-light btn-xl js-scroll-trigger mb-2" href="retrive_data.php">List of Missing Children</a>
-    </div>
-    <div class="col-lg-4">
-      <a class="btn btn-light btn-xl js-scroll-trigger mb-2" href="search.php">Search for a child</a>
+    <div class="col-lg-6">
+      <a class="btn btn-light btn-xl js-scroll-trigger mb-2" href="retrive_data.php">Search/See the children</a>
     </div>
     </div>
   </section>

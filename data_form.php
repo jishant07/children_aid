@@ -49,73 +49,93 @@
 		color:white !important;
 		transition: 0.3s;
 	}
+	.btn-info
+	{
+		width: 100%;
+		padding: 10px;
+	}
 </style>
 </head>
 <body>
+	<div style="padding-top: 130px;"></div>
 	<br>
-	<div class="container-fluid" id="banner" style="display: none;">
-		<div class="jumbotron" style="background:#fd7e14;color:white;margin:auto;">
-			<h1>Add the details here.</h1>
-		</div>
-	</div>
 	<br>
-	<!-- Loading Screen -->
 	<div class="container">
-		<div id="loading">
-			<img src="./img/loader.gif">	
+		<div class="row">
+			<div class="col-lg-3 col-sm-6 col-xs-6 mb-2">
+				<button id="part1_button" class="btn btn-info">Basic Information</button>
+			</div>
+			<div class="col-lg-3 col-sm-6 col-xs-6 mb-2">
+				<button id="part2_button" class="btn btn-info">Appearance Details</button>
+			</div>
+			<div class="col-lg-3 col-sm-6 col-xs-6 mb-2">
+				<button id="part3_button" class="btn btn-info">Schooling & Court</button>
+			</div>
+			<div class="col-lg-3 col-sm-6 col-xs-6 mb-2"><button id="part4_button" class="btn btn-info">Health & Misc.</button></div>
 		</div>
 	</div>
 	<!-- Main Page -->
-	<div id="main" style="display: none;">
+	<div id="main" style="margin: auto;position: relative;">
 	<!-- Part 1 Starts -->
 	<form method="post" action="data_save.php">
 	<div class="container" id="part1">
 		<br>
 			<div class="row">
-				<div class="col-lg-3"><input type="text" name="name" placeholder="Name"></div>
-				<div class="col-lg-3"><input type="text" name="file_number" placeholder="File Number"></div>
-				<div class="col-lg-3"><input type="text" name="reg_number" placeholder="Register Number"></div>
-				<div class="col-lg-3"><input type="number" name="aadhar_number" placeholder="Aadhar Number"></div>
+				<div class="col-lg-3 col-sm-6 col-xs-6 mb-2"><input type="text" name="name" placeholder="Name"></div>
+				<div class="col-lg-3 col-sm-6 col-xs-6 mb-2"><input type="text" name="file_number" placeholder="File Number"></div>
+				<div class="col-lg-3 col-sm-6 col-xs-6 mb-2"><input type="text" name="reg_number" placeholder="Register Number"></div>
+				<div class="col-lg-3 col-sm-6 col-xs-6 mb-2"><input type="number" name="aadhar_number" placeholder="Aadhar Number"></div>
 			</div>
 			<br>
 			<div class="row">
-				<div class="col-lg-3">
+				<div class="col-lg-3 col-sm-6 col-xs-6 mb-2">
 					<textarea style="width:100%;" name="perm_add" placeholder="Permanent Address"></textarea>
 				</div>
-				<div class="col-lg-3">
+				<div class="col-lg-3 col-sm-6 col-xs-6 mb-2">
 					<textarea style="width:100%;" name="loc_add" placeholder="Local Address"></textarea>
 				</div>
-				<div class="col-lg-3">
+				<div class="col-lg-3 col-sm-6 col-xs-6 mb-2">
 					<input type="text" name="tehsil" placeholder="Tehsil">
 				</div>
-				<div class="col-lg-3">
+				<div class="col-lg-3 col-sm-6 col-xs-6 mb-2">
 					<input type="text" name="branch" placeholder="Branch">
 				</div>
 			</div>
 			<br>
 			<div class="row">
-				<div class="col-lg-3"><input type="text" name="village" placeholder="village"></div>
-				<div class="col-lg-3">
+				<div class="col-lg-3 col-sm-6 col-xs-6 mb-2"><input type="text" name="village" placeholder="village"></div>
+				<div class="col-lg-3 col-sm-6 col-xs-6 mb-2">
 					<input type="number" name="mob_num" placeholder="Mobile Number">
 				</div>
-				<div class="col-lg-3"><input type="number" name="age" placeholder="Age">
+				<div class="col-lg-3 col-sm-6 col-xs-6 mb-2"><input type="number" name="age" placeholder="Age">
 				</div>
-				<div class="col-lg-3">Date of Birth<input type="date" name="date_of_birth"></div>
+				<div class="col-lg-3 col-sm-6 col-xs-6 mb-2">Date of Birth<input type="date" name="date_of_birth"></div>
 			</div>
 			<br>
+			<br>
+			<h4>You can submit or fill up other parts</h4>
+				<button class="btn btn-primary" value="Submit">Submit</button>
+				<br>
+				<br>
+	</div>
+	<!-- Part 1 Ends -->
+
+	<!-- Part 2 Startes -->
+	<div class="container" id="part2" style="display:none;">
+			<br>
 			<div class="row">
-				<div class="col-lg-3">
+				<div class="col-lg-3 col-sm-6 col-xs-6 mb-2">
 					<input type="number" name="height" placeholder="Height">
 				</div>
-				<div class="col-lg-3">
+				<div class="col-lg-3 col-sm-6 col-xs-6 mb-2">
 					<input type="number" name="weight" placeholder="Weight">
 				</div>
-				<div class="col-lg-3"><input type="number" name="chest" placeholder="Chest"></div>
-				<div class="col-lg-3"><input type="text" name="comp" placeholder="Complexion"></div>
+				<div class="col-lg-3 col-sm-6 col-xs-6 mb-2"><input type="number" name="chest" placeholder="Chest"></div>
+				<div class="col-lg-3 col-sm-6 col-xs-6 mb-2"><input type="text" name="comp" placeholder="Complexion"></div>
 			</div>
 			<br>
 			<div class="row">
-				<div class="col-lg-3">
+				<div class="col-lg-3 col-sm-6 col-xs-6 mb-2">
 					<select name="eye_color">
 						<option selected disabled>Select an Eye Colour</option>
 						<option value="Black">Balck</option>
@@ -126,7 +146,7 @@
 						<option>Other</option>
 					</select>
 				</div>
-				<div class="col-lg-3">
+				<div class="col-lg-3 col-sm-6 col-xs-6 mb-2">
 					<select name="nose_type">
 						<option selected disabled>Select Nose Type</option>
 						<option>Turned- Up</option>
@@ -137,26 +157,16 @@
 						<option>Other</option>
 					</select>
 				</div>
-				<div class="col-lg-3">
+				<div class="col-lg-3 col-sm-6 col-xs-6 mb-2">
 					<input type="text" name="hair" placeholder="Hair">
 				</div>
-				<div class="col-lg-3">
+				<div class="col-lg-3 col-sm-6 col-xs-6 mb-2">
 					<input type="number" name="teeth" placeholder="No of Teeth">
 				</div>
 			</div>
 			<br>
-			<a id="show_part_2">Show Part 2</a>
-			<br>
-			<br>
-			<br>
-	</div>
-	<!-- Part 1 Ends -->
-
-	<!-- Part 2 Startes -->
-	<div class="container" id="part2" style="display:none;">
-			<br>
 			<div class="row">
-				<div class="col-lg-3">
+				<div class="col-lg-3 col-sm-6 col-xs-6 mb-2">
 					<select name="lip_type">
 						<option selected disabled>Select lips type</option>
 						<option>Heart Shaped</option>
@@ -167,19 +177,31 @@
 						<option>Other</option>
 					</select>
 				</div>
-				<div class="col-lg-3">
+				<div class="col-lg-3 col-sm-6 col-xs-6 mb-2">
 					<textarea style="width:100%" placeholder="General Condition" name="general_condition"></textarea>
 				</div>
-				<div class="col-lg-3">
+				<div class="col-lg-3 col-sm-6 col-xs-6 mb-2">
 					<input type="text" name="religion" placeholder="Religion">
 				</div>
-				<div class="col-lg-3">
+				<div class="col-lg-3 col-sm-6 col-xs-6 mb-2">
 					<input type="text" name="caste" placeholder="Caste">
 				</div>
 			</div>
 			<br>
+			<br>
+			<br>
+			<h4>You can submit or fill up other parts</h4>
+				<button class="btn btn-primary" value="Submit">Submit</button>
+				<br>
+				<br>
+	</div>
+	<!-- Part 2 Ends -->
+
+	<!-- Part 3 Starts -->
+	<div class="container" id="part3" style="display:none;">
+			<br>
 			<div class="row">
-				<div class="col-lg-3">
+				<div class="col-lg-3 col-sm-6 col-xs-6 mb-2">
 					<a id="add_language">Add Language</a>
 					<br>
 					<br>
@@ -189,13 +211,13 @@
 					<br>
 					<br>
 				</div>
-				<div class="col-lg-3">
+				<div class="col-lg-3 col-sm-6 col-xs-6 mb-2">
 					<input type="text" name="mother_tongue" placeholder="Mother Tongue">
 				</div>
-				<div class="col-lg-3">
+				<div class="col-lg-3 col-sm-6 col-xs-6 mb-2">
 					<input type="text" name="socio_economic_class" placeholder="Socio Economic Class">
 				</div>
-				<div class="col-lg-3">
+				<div class="col-lg-3 col-sm-6 col-xs-6 mb-2">
 					<label>Literacy level</label>
 					<select name="lit_level" placeholder="Literacy Level">
 						<option selected disabled>Select Literacy Level</option>
@@ -207,25 +229,25 @@
 			</div>
 			<br>
 			<div class="row">
-				<div class="col-lg-3">
+				<div class="col-lg-3 col-sm-6 col-xs-6 mb-2">
 					<input type="text" name="prev_school" placeholder="Previous School">
 				</div>
-				<div class="col-lg-3">
+				<div class="col-lg-3 col-sm-6 col-xs-6 mb-2">
 					<input type="text" name="child_court" placeholder="Children Court">
 				</div>
-				<div class="col-lg-3">
+				<div class="col-lg-3 col-sm-6 col-xs-6 mb-2">
 					<input type="text" name="case_no" placeholder="Case Number">
 				</div>
-				<div class="col-lg-3">
+				<div class="col-lg-3 col-sm-6 col-xs-6 mb-2">
 					<input type="text" name="case_handler" placeholder="Case Handler">
 				</div>
 			</div>
 			<br>
 			<div class="row">
-				<div class="col-lg-3">
+				<div class="col-lg-3 col-sm-6 col-xs-6 mb-2">
 					<input type="text" name="section_referral" placeholder="Section Referral">
 				</div>
-				<div class="col-lg-3">
+				<div class="col-lg-3 col-sm-6 col-xs-6 mb-2">
 					<select name="status">
 						<option disabled selected>Select child status</option>
 						<option>CCL</option>
@@ -234,28 +256,18 @@
 						<option>Others</option>
 					</select>
 				</div>
-				<div class="col-lg-3">
+				<div class="col-lg-3 col-sm-6 col-xs-6 mb-2">
 					Date of Custody
 					<input type="date" name="date_of_custody" placeholder="Date of Custody">
 				</div>
-				<div class="col-lg-3">
+				<div class="col-lg-3 col-sm-6 col-xs-6 mb-2">
 					Date of Addmission
 					<input type="date" name="date_of_admission" placeholder="Date of Addmission">
 				</div>
 			</div>
 			<br>
-			<a id="show_part_3">Show Part 3</a>
-			<br>
-			<br>
-			<br>
-	</div>
-	<!-- Part 2 Ends -->
-
-	<!-- Part 3 Starts -->
-	<div class="container" id="part3" style="display:none;">
-		<br>
 			<div class="row">
-				<div class="col-lg-3">
+				<div class="col-lg-3 col-sm-6 col-xs-6 mb-2">
 					<select name="is_repeater">
 						<option selected disabled>Select repeater status</option>
 						<option>Yes</option>
@@ -263,36 +275,18 @@
 						<option>Don't know</option>
 					</select>
 				</div>
-				<div class="col-lg-3">
+				<div class="col-lg-3 col-sm-6 col-xs-6 mb-2">
 					Date of Discharge <input type="date" name="date_of_discharge" placeholder="Date of Discharge">
 				</div>
-				<div class="col-lg-3">
+				<div class="col-lg-3 col-sm-6 col-xs-6 mb-2">
 					<input type="text" name="prev_institution" placeholder="Previous Institution">
 				</div>
-				<div class="col-lg-3">
-					
-				</div>
 			</div>
 			<br>
-			<a id="add_mediacal_details" style="text-align:left;float:left;">Add</a>
-			<br>
-			<br>
-			<div class="row">
-				<div class="col-lg-4" id="medical"><h3>Medical</h3>
+			<h4>You can submit or fill up other parts</h4>
+				<button class="btn btn-primary" value="Submit">Submit</button>
 				<br>
-				</div>
-				<div class="col-lg-4" id="psychological"><h3>Psychological</h3>
 				<br>
-				</div>
-				<div class="col-lg-4" id="psychiatric"><h3>Psychiatric</h3>
-				<br>
-				</div>
-			</div>
-			<span id='rem_medical_det'><a style="text-align:right;float:right;">Remove</a></span>
-			<br>
-			<br>
-			<a id="show_part_4">Show Part 4</a>
-			<br>
 			<br>
 			<br>
 		</div>
@@ -301,23 +295,45 @@
 		<!-- Part 4 Starts -->
 		<div class="container" id="part4" style="display: none;">
 			<br>
-			<div class="col-lg-3">
+			<br>
+			<div class="row">
+				<div class="col-lg-1">
+					<a id="add_mediacal_details" style="text-align:left;float:left;">Add</a>
+				</div>
+				<div class="col-lg-3" id="medical"><h3>Medical</h3>
+				<br>
+				</div>
+				<div class="col-lg-3" id="psychological"><h3>Psychological</h3>
+				<br>
+				</div>
+				<div class="col-lg-3" id="psychiatric"><h3>Psychiatric</h3>
+				<br>
+				</div>
+				<div class="col-lg-2" style="width:100%">
+					<span id='rem_medical_det'><a style="text-align:right;float:right;">Remove</a></span>
+				</div>
+			</div>
+			<br>
+			<br>
+			<div class="col-lg-3 col-sm-6 col-xs-6 mb-2">
 				<textarea name="nature_dod" placeholder="Nature and Date of Disposal"></textarea>
 			</div>
-			<div class="col-lg-3">
+			<div class="col-lg-3 col-sm-6 col-xs-6 mb-2">
 				<textarea name="observation" placeholder="Observation"></textarea>
 			</div>
-			<div class="col-lg-3">
+			<div class="col-lg-3 col-sm-6 col-xs-6 mb-2">
 				<textarea name="pre_problem" placeholder="Present Problem"></textarea>
 			</div>
-			<div class="col-lg-3">
+			<div class="col-lg-3 col-sm-6 col-xs-6 mb-2">
 				<textarea name="agg_cir" placeholder="Aggravating Circumstances"></textarea>
 			</div>
 			<br>
+			<button class="btn btn-primary" value="Submit">Submit</button>
 			<br>
-			<button value="Submit">Submit</button>
+			<br>
 		</div>
 	</form>
+</div>
 </body>
 <script src="vendor/jquery/jquery.min.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -329,118 +345,72 @@
 <script type="text/javascript">
 	$(document).ready(function()
 	{
-		setTimeout(function() {
-    		$('#loading').fadeOut("fast",function()
-    		{
-    			
-    			$('#banner').fadeIn("fast","swing",function()
-    			{
-    				$('#main').fadeIn("fast","swing");		
-    			});
-    		});
-    	}, 1000);
-	});
-	$('#show_part_2').on("click",function()
-	{
-		$('#main').fadeOut("fast",function()
+    	function hide_all()
+    	{
+    		$('#part1').fadeOut("fast")
+    		$('#part2').fadeOut("fast")
+    		$('#part3').fadeOut("fast")
+    		$('#part4').fadeOut("fast")
+    	}
+    	$("#part1_button").on("click",function()
+    	{
+    		hide_all();
+    		$('#part1').fadeIn("slow");
+    	});
+    	$("#part2_button").on("click",function()
+    	{
+    		hide_all();
+    		$('#part2').fadeIn("slow");
+    	});
+    	$("#part3_button").on("click",function()
+    	{
+    		hide_all();
+    		$('#part3').fadeIn("slow");
+    	});
+    	$("#part4_button").on("click",function()
+    	{
+    		hide_all();
+    		$('#part4').fadeIn("slow");
+    	});
+		var med_count = $('#medical').length;
+		$("#add_mediacal_details").on("click",function()
 		{
-			$('#loading').fadeIn("fast",function()
-			{
-					setTimeout(function() {
-    				$('#loading').fadeOut("fast",function()
-    				{
-						$('#part1').fadeOut("fast",function()
-						{
-							$('#part2').fadeIn("fast",function()
-							{
-								$('#main').fadeIn("fast","swing");
-							});
-						});   			
-    				});
-    			}, 300);
-			})
-		})
-	});
-	$('#show_part_3').on("click",function()
-	{
-		$('#main').fadeOut("fast",function()
-		{
-			$('#loading').fadeIn("fast",function()
-			{
-					setTimeout(function() {
-    				$('#loading').fadeOut("fast",function()
-    				{
-						$('#part2').fadeOut("fast",function()
-						{
-							$('#part3').fadeIn("fast",function()
-							{
-								$('#main').fadeIn("fast","swing");
-							});
-						});   			
-    				});
-    			}, 300);
-			})
-		})
-	});
-	$('#show_part_4').on("click",function()
-	{
-		$('#main').fadeOut("fast",function()
-		{
-			$('#loading').fadeIn("fast",function()
-			{
-					setTimeout(function() {
-    				$('#loading').fadeOut("fast",function()
-    				{
-						$('#part3').fadeOut("fast",function()
-						{
-							$('#part4').fadeIn("fast",function()
-							{
-								$('#main').fadeIn("fast","swing");
-							});
-						});   			
-    				});
-    			}, 300);
-			})
-		})
-	});
-	var med_count = $('#medical').length;
-	$("#add_mediacal_details").on("click",function()
-	{
-		med_count++;
-		$('#medical').append("<br class='med_"+med_count+"'><input type='text' class='med_"+med_count+"' name='medical[]'>");
-		$('#psychological').append("<br class='med_"+med_count+"'><input type='text' class='med_"+med_count+"' name='psychological[]'>");
-		$('#psychiatric').append("<br class='med_"+med_count+"'><input type='text' class='med_"+med_count+"' name='psychiatric[]'>");
-	});
-	$(document).on("click","#rem_medical_det",function()
-	{
-		var str = ".med_"+(med_count);
-		$(str).each(function()
-		{
-			$(this).fadeOut(300,function()
-			{
-				$(this).remove();
-			});
+			med_count++;
+			$('#medical').append("<br class='med_"+med_count+"'><input type='text' class='med_"+med_count+"' name='medical[]'>");
+			$('#psychological').append("<br class='med_"+med_count+"'><input type='text' class='med_"+med_count+"' name='psychological[]'>");
+			$('#psychiatric').append("<br class='med_"+med_count+"'><input type='text' class='med_"+med_count+"' name='psychiatric[]'>");
 		});
-		med_count--;
-	});
-	var language_count = $('#language').length;
-	$("#add_language").on("click",function()
-	{
-		language_count++;
-		$("#language_div").append("<input type='text' name='other_languages[]' placeholder='Language' id='language_"+language_count+"'"+">");
-		console.log("From the add_language thing", language_count);
-	});
-	$("#remove_language").on("click",function()
-	{
-		var rem = "#language_"+(language_count);
-		$(rem).each(function()
+		$(document).on("click","#rem_medical_det",function()
 		{
-			$(this).fadeOut(300,function()
+			var str = ".med_"+(med_count);
+			$(str).each(function()
 			{
-				$(this).remove();
+				$(this).fadeOut(300,function()
+				{
+					$(this).remove();
+				});
 			});
+			med_count--;
 		});
-		language_count--;
-	})
+		var language_count = $('#language').length;
+		$("#add_language").on("click",function()
+		{
+			language_count++;
+			$("#language_div").append("<input type='text' name='other_languages[]' placeholder='Language' id='language_"+language_count+"'"+">");
+			console.log("From the add_language thing", language_count);
+		});
+		$("#remove_language").on("click",function()
+		{
+			var rem = "#language_"+(language_count);
+			$(rem).each(function()
+			{
+				$(this).fadeOut(300,function()
+				{
+					$(this).remove();
+				});
+			});
+			language_count--;
+		});
+	});
 </script>
 </html>
