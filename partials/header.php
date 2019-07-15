@@ -20,12 +20,13 @@
 <!-- Data Table Plugin Include -->
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.dataTables.min.css">
 <!-- Testing -->
 <style type="text/css">
 	*
 	{
 		font-size: 15px;
-		text-align: center;
+		/*text-align: center;*/
 		margin: auto;
 		line-height: 15px;
 	}

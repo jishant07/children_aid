@@ -196,14 +196,18 @@
 </body>
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+<script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
 <script type="text/javascript" src="./jquery.tabledit.js"></script>
 <script type="text/javascript">
 	$(document).ready(function()
 	{
 
-		$('#table_id').DataTable();
+		var table = $('#table_id').DataTable({
+			/*responsive:true,
+			scrollY:true,*/
+		});
 
-		$('#table_id').Tabledit({
+		/*$('#table_id').Tabledit({
 			inputClass: 'form-control input-sm',
 			columns: {
         identifier: [0, 'id'],
@@ -271,7 +275,7 @@
 		            }
 		        });
 		    }
-		});
+		});*/
 	});
 </script>
 </html>
