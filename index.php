@@ -62,6 +62,9 @@ session_start();
             <a class="nav-link js-scroll-trigger" href="#contact">Contact Us</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="gallery.php">Gallery</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="logout.php">Logout!</a>
           </li>
         </ul>
@@ -259,7 +262,7 @@ session_start();
     </div>
   </section> -->
   <section>
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <div id="portfolio" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -267,16 +270,16 @@ session_start();
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="d-block w-100" src="./img/portfolio/fullsize/1.jpg" alt="First slide" style="max-height: 400px;">
+      <img class="d-block w-100" src="./img/portfolio/fullsize/1.jpg" alt="First slide" style="max-height: 500px;">
       <div class="carousel-caption d-none d-md-block">
         <h4>Item 1</h4>
       </div>
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="./img/portfolio/fullsize/2.jpg" alt="Second slide" style="max-height: 400px;">
+      <img class="d-block w-100" src="./img/portfolio/fullsize/2.jpg" alt="Second slide" style="max-height: 500px;">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="./img/portfolio/fullsize/3.jpg" alt="Third slide" style="max-height: 400px;">
+      <img class="d-block w-100" src="./img/portfolio/fullsize/3.jpg" alt="Third slide" style="max-height: 500px;">
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -326,8 +329,8 @@ session_start();
   <!-- Custom scripts for this template -->
   <script src="js/creative.min.js"></script>
   <script type="text/javascript">
-    $('#carouselExampleIndicators').carousel({
-      interval:2000
+    $('#portfolio').carousel({
+      interval:500
     });
   </script>
 </body>
