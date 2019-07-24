@@ -174,7 +174,7 @@ session_start();
   </section>
 
   <!-- Portfolio Section -->
-  <section id="portfolio">
+  <!-- <section id="portfolio">
     <div class="container-fluid p-0">
       <div class="row no-gutters">
         <div class="col-lg-4 col-sm-6">
@@ -257,6 +257,37 @@ session_start();
         </div>
       </div>
     </div>
+  </section> -->
+  <section>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="./img/portfolio/fullsize/1.jpg" alt="First slide" style="max-height: 400px;">
+      <div class="carousel-caption d-none d-md-block">
+        <h4>Item 1</h4>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="./img/portfolio/fullsize/2.jpg" alt="Second slide" style="max-height: 400px;">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="./img/portfolio/fullsize/3.jpg" alt="Third slide" style="max-height: 400px;">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
   </section>
 
   <!-- Contact Section -->
@@ -294,7 +325,11 @@ session_start();
 
   <!-- Custom scripts for this template -->
   <script src="js/creative.min.js"></script>
-
+  <script type="text/javascript">
+    $('#carouselExampleIndicators').carousel({
+      interval:2000
+    });
+  </script>
 </body>
 
 </html>
