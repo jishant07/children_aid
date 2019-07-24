@@ -14,19 +14,19 @@
 <!-- Plugin CSS -->
 <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 <!-- Theme CSS - Includes Bootstrap -->
 <link href="css/creative.min.css" rel="stylesheet">
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<!-- Data Table Plugin Include -->
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
-<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.dataTables.min.css">
-<!-- Testing -->
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/jqc-1.12.4/dt-1.10.19/b-1.5.6/sl-1.3.0/datatables.min.css"/>
+<link rel="stylesheet" type="text/css" href="Editor-1.9.0/css/editor.dataTables.css">
+ 
 <style type="text/css">
 	*
 	{
 		font-size: 15px;
-		/*text-align: center;*/
+		text-align: center;
 		margin: auto;
 		line-height: 15px;
 	}
@@ -57,4 +57,3 @@
 	}
 </style>
 </head>
-<body>
