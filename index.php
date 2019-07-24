@@ -1,3 +1,15 @@
+<?php 
+session_start();
+ if(isset($_SESSION['is_admin']) && $_SESSION['is_admin'])
+ {$admin = 1;}
+ else if(isset($_SESSION['is_worker']) && $_SESSION['is_worker'])
+ {$admin = 0;}
+ else
+ {
+  header("Location: login.php");
+ }
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -68,27 +80,57 @@
       </div>
     </div>
   </header>
-
   <!-- About Section -->
-  <section class="page-section bg-primary" id="about">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-8 text-center">
-          <h2 class="text-white mt-0">We've got what you need!</h2>
-          <hr class="divider light my-4">
-          <p class="text-white mb-4">Submit the details of a child that you see is unattended or in danger and we will take care of the rest</p>
+  <?php
+    if($admin)
+    {
+          echo "<section class='page-section bg-primary' id='about'>
+        <div class='container'>
+          <div class='row justify-content-center'>
+            <div class='col-lg-8 text-center'>
+              <h2 class='text-white mt-0'>We've got what you need!</h2>
+              <hr class='divider light my-4'>
+              <p class='text-white mb-4'>Submit the details of a child that you see is unattended or in danger and we will take care of the rest</p>
+            </div>
+          </div>
+        </div>
+        <div class='row' style='text-align:center;margin:auto;'>
+        <div class='col-lg-6'>
+          <a class='btn btn-light btn-xl js-scroll-trigger mb-2' href='data_form.php'>
+            Inform about a child
+          </a>
+        </div>
+        <div class='col-lg-6'>
+            <a class='btn btn-light btn-xl js-scroll-trigger mb-2' href='retrive_data.php'>
+              Search/See the children
+            </a>
+        </div>
+        </div>
+      </section>";
+    }
+    if(!$admin)
+    {
+      echo "<section class='page-section bg-primary' id='about'>
+    <div class='container'>
+      <div class='row justify-content-center'>
+        <div class='col-lg-8 text-center'>
+          <h2 class='text-white mt-0'>We've got what you need!</h2>
+          <hr class='divider light my-4'>
+          <p class='text-white mb-4'>Submit the details of a child that you see is unattended or in danger and we will take care of the rest</p>
         </div>
       </div>
     </div>
-    <div class="row" style="text-align:center;margin:auto;">
-    <div class="col-lg-6">
-      <a class="btn btn-light btn-xl js-scroll-trigger mb-2" href="data_form.php">Inform about a child</a>
+    <div class='row' style='text-align:center;margin:auto;'>
+    <div class='col-lg-12'>
+      <a class='btn btn-light btn-xl js-scroll-trigger mb-2' href='retrive_data.php'>
+        Search/See the children
+      </a>
     </div>
-    <div class="col-lg-6">
-      <a class="btn btn-light btn-xl js-scroll-trigger mb-2" href="retrive_data.php">Search/See the children</a>
     </div>
-    </div>
-  </section>
+  </section>";
+    }
+  ?>
+  
 
   <!-- Services Section -->
   <section class="page-section" id="services">

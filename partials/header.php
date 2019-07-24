@@ -1,3 +1,14 @@
+<?php 
+session_start();
+ if(isset($_SESSION['is_admin']) && $_SESSION['is_admin'])
+ {$admin = 1;}
+ else if(isset($_SESSION['is_worker']) && $_SESSION['is_worker'])
+ {$admin = 0;}
+ else
+ {
+  header("Location: login.php");
+ }
+ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -28,7 +39,7 @@
 		font-size: 15px;
 		text-align: center;
 		margin: auto;
-		line-height: 15px;
+		line-height: 10px;
 	}
 	input,select
 	{
