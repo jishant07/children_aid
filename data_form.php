@@ -1,3 +1,14 @@
+<?php 
+session_start();
+ if(isset($_SESSION['is_admin']) && $_SESSION['is_admin'])
+ {$admin = 1;}
+ else if(isset($_SESSION['is_worker']) && $_SESSION['is_worker'])
+ {header("Location: login.php");}
+ else
+ {
+  header("Location: login.php");
+ }
+ ?>
 <?php include './partials/header.php'; ?>
 <body>
 	<div style="padding-top: 130px;"></div>

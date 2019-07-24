@@ -1,9 +1,9 @@
 <?php 
 session_start();
  if(isset($_SESSION['is_admin']) && $_SESSION['is_admin'])
- {$admin = 1;}
+ {}
  else if(isset($_SESSION['is_worker']) && $_SESSION['is_worker'])
- {$admin = 0;}
+ {}
  else
  {
   header("Location: login.php");
@@ -39,46 +39,12 @@ session_start();
 				<th>Mobile Number</th>
 				<th>Age</th>
 				<th>Date of Birth</th>
-				<th>Height</th>
-				<th>Weight</th>
-				<th>Chest</th>
-				<th>Complextion</th>
-				<th>Eye Color</th>
-				<th>Nose Type</th>
-				<th>Hair</th>
-				<th>Number of Teeth</th>
-				<th>Lip Type</th>
-				<th>General Condition</th>
-				<th>Religion</th>
-				<th>Caste</th>
-				<th>Mother Tongue</th>
-				<th>Other Languages</th>
-				<th>Socio Economic Class</th>
-				<th>Literacy Level</th>
-				<th>Previous School</th>
-				<th>Children Court</th>
-				<th>Case Number</th>
-				<th>Case Handler</th>
-				<th>Section Referral</th>
-				<th>Status</th>
-				<th>Date of Custody</th>
-				<th>Date of Admission</th>
-				<th>Repeater Status</th>
-				<th>Date of Discharge</th>
-				<th>Previous Institution</th>
-				<th>Medical</th>
-				<th>Psychological</th>
-				<th>Psychiatric</th>
-				<th>Nature and Date of Disposal</th>
-				<th>Observation</th>
-				<th>Present Problem</th>
-				<th>Aggravating Circumstances</th>
 			</tr>
 		</thead>
 		<tbody>
 <?php 
 	require("./partials/database_credentials.php");
-	$sql = "select * from children_data";
+	$sql = "select * from minimal_form_data";
 	$result = $con->query($sql);
 	$count = 0;
 	if($result->num_rows > 0)
@@ -103,96 +69,6 @@ session_start();
 		<td> <?php echo (!$res['mob_num'] ? "NA" : $res['mob_num']) ?> </td>
 		<td> <?php echo (!$res['age'] ? "NA" : $res['age']) ?> </td>
 		<td> <?php echo (!$res['date_of_birth'] ? "NA" : $res['date_of_birth']) ?> </td>
-		<td> <?php echo (!$res['height'] ? "NA" : $res['height']) ?> </td>
-		<td> <?php echo (!$res['weight'] ? "NA" : $res['weight']) ?> </td>
-		<td> <?php echo (!$res['chest'] ? "NA" : $res['chest']) ?> </td>
-		<td> <?php echo (!$res['comp'] ? "NA" : $res['comp']) ?> </td>
-		<td> <?php echo (!isset($res['eye_color']) ? "NA" : $res['eye_color']) ?> </td>
-		<td> <?php echo (!isset($res['nose_type']) ? "NA" : $res['nose_type']) ?> </td>
-		<td> <?php echo (!$res['hair'] ? "NA" : $res['hair']) ?> </td>
-		<td> <?php echo (!$res['teeth'] ? "NA" : $res['teeth']) ?> </td>
-		<td> <?php echo (!isset($res['lip_type']) ? "NA" : $res['lip_type']) ?> </td>
-		<td> <?php echo (!$res['general_condition'] ? "NA" : $res['general_condition']) ?> </td>
-		<td> <?php echo (!$res['religion'] ? "NA" : $res['religion']) ?> </td>
-		<td> <?php echo (!$res['caste'] ? "NA" : $res['caste']) ?> </td>
-		<td> <?php echo (!$res['mother_tongue'] ? "NA" : $res['mother_tongue']) ?> </td>
-		<td> 
-			<?php 
-				if(!empty($res['other_languages']))
-				{
-					for($i=0;$i <count($res['other_languages']); $i++) 
-					{ 
-						echo "<li>".$res['other_languages'][$i]."</li>";
-					}
-				}
-				else
-				{
-					echo "NA";
-				}
-			?>
-		</td>
-		<td> <?php echo (!$res['socio_economic_class'] ? "NA" : $res['socio_economic_class']) ?> </td>
-		<td> <?php echo (!isset($res['lit_level']) ? "NA" : $res['lit_level']) ?> </td>
-		<td> <?php echo (!$res['prev_school'] ? "NA" : $res['prev_school']) ?> </td>
-		<td> <?php echo (!$res['child_court'] ? "NA" : $res['child_court']) ?> </td>
-		<td> <?php echo (!$res['case_no'] ? "NA" : $res['case_no']) ?> </td>
-		<td> <?php echo (!$res['case_handler'] ? "NA" : $res['case_handler']) ?> </td>
-		<td> <?php echo (!$res['section_referral'] ? "NA" : $res['section_referral']) ?> </td>
-		<td> <?php echo (!isset($res['status']) ? "NA" : $res['status']) ?> </td>
-		<td> <?php echo (!$res['date_of_custody'] ? "NA" : $res['date_of_custody']) ?> </td>
-		<td> <?php echo (!$res['date_of_admission'] ? "NA" : $res['date_of_admission']) ?> </td>
-		<td> <?php echo (!isset($res['is_repeater']) ? "NA" : $res['is_repeater']) ?> </td>
-		<td> <?php echo (!$res['date_of_discharge'] ? "NA" : $res['date_of_discharge']) ?> </td>
-		<td> <?php echo (!$res['prev_institution'] ? "NA" : $res['prev_institution']) ?> </td>
-		<td> 
-			<?php 
-				if(!empty($res['medical']))
-				{
-					for($i=0;$i <count($res['medical']); $i++) 
-					{ 
-						echo "<li>".$res['medical'][$i]."</li>";
-					}
-				}
-				else
-				{
-					echo "NA";
-				}
-			?>
-		</td>
-		<td> 
-			<?php 
-				if(!empty($res['psychological']))
-				{
-					for($i=0;$i <count($res['psychological']); $i++) 
-					{ 
-						echo "<li>".$res['psychological'][$i]."</li>";
-					}
-				}
-				else
-				{
-					echo "NA";
-				}
-			?>
-		</td>
-		<td> 
-			<?php 
-				if(!empty($res['psychiatric']))
-				{
-					for($i=0;$i <count($res['psychiatric']); $i++) 
-					{ 
-						echo "<li>".$res['psychiatric'][$i]."</li>";
-					}
-				}
-				else
-				{
-					echo "NA";
-				}
-			?>
-		</td>
-		<td> <?php echo (!$res['nature_dod'] ? "NA" : $res['nature_dod']) ?> </td>
-		<td> <?php echo (!$res['observation'] ? "NA" : $res['observation']) ?> </td>
-		<td> <?php echo (!$res['pre_problem'] ? "NA" : $res['pre_problem']) ?> </td>
-		<td> <?php echo (!$res['agg_cir'] ? "NA" : $res['agg_cir']) ?> </td>
 	</tr>
 <?php 
 		}

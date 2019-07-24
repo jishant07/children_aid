@@ -28,37 +28,63 @@
 <!--===============================================================================================-->
 </head>
 <body>
-	
-	<div class="limiter">
-		<div class="container-login100">
-			<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-50">
-				<form class="login100-form validate-form" action="user_check.php" method="post">
-					<span class="login100-form-title p-b-33">
-						Account Login
-					</span>
-
-					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-						<input class="input100" type="text" name="user_name" placeholder="Email">
-						<span class="focus-input100-1"></span>
-						<span class="focus-input100-2"></span>
+	<div class="container" id="loader">
+		<img src="./img/loader.gif" style="height:100vh;width:100%;">
+	</div>
+	<div id="choice" style="display:none;">
+		<div class="limiter">
+			<div class="container-login100">
+				<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-50">
+					<div class="login100-form validate-form">
+						<span class="login100-form-title p-b-33">
+							Choice
+						</span>
+						<div class="container-login100-form-btn m-t-20">
+							<button class="login100-form-btn mb-4" id="login_choice">
+								Sign in
+							</button>
+						</div>
 					</div>
-
-					<div class="wrap-input100 rs1 validate-input" data-validate="Password is required">
-						<input class="input100" type="password" name="pwd" placeholder="Password">
-						<span class="focus-input100-1"></span>
-						<span class="focus-input100-2"></span>
-					</div>
-
-					<div class="container-login100-form-btn m-t-20">
-						<button class="login100-form-btn">
-							Sign in
+					<a href="minimal_form.php">
+						<button class="login100-form-btn mb-4">
+							Tell about a child
 						</button>
-					</div>
-				</form>
+					</a>
+				</div>
 			</div>
 		</div>
 	</div>
-	
+	<div class="login" style="display:none;">
+		<div class="limiter">
+			<div class="container-login100">
+				<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-50">
+					<form class="login100-form validate-form" action="user_check.php" method="post">
+						<span class="login100-form-title p-b-33">
+							Account Login
+						</span>
+
+						<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+							<input class="input100" type="text" name="user_name" placeholder="Email">
+							<span class="focus-input100-1"></span>
+							<span class="focus-input100-2"></span>
+						</div>
+
+						<div class="wrap-input100 rs1 validate-input" data-validate="Password is required">
+							<input class="input100" type="password" name="pwd" placeholder="Password">
+							<span class="focus-input100-1"></span>
+							<span class="focus-input100-2"></span>
+						</div>
+
+						<div class="container-login100-form-btn m-t-20">
+							<button class="login100-form-btn">
+								Sign in
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
 
 	
 <!--===============================================================================================-->
@@ -77,6 +103,29 @@
 	<script src="vendor/countdowntime/countdowntime.js"></script>
 <!--===============================================================================================-->
 	<script src="js/main.js"></script>
-
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			setTimeout(function()
+			{
+				$('#loader').fadeOut("fast",function()
+				{
+					$('#choice').fadeIn("fast");
+				});
+			},500);
+			$("#login_choice").on("click",function()
+			{
+				$("#choice").fadeOut("fast");
+				$('#loader').fadeIn("fast",function(){
+					setTimeout(function()
+					{$('#loader').fadeOut("fast");},500);
+					setTimeout(function()
+					{
+						$('.login').fadeIn();
+					},500);
+				});
+			});
+		});
+	</script>
 </body>
 </html>
