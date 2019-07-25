@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 24, 2019 at 07:37 PM
+-- Generation Time: Jul 25, 2019 at 05:22 PM
 -- Server version: 10.3.16-MariaDB
 -- PHP Version: 7.3.6
 
@@ -48,27 +48,9 @@ INSERT INTO `admin_user` (`username`, `password`) VALUES
 
 CREATE TABLE `children_data` (
   `id` int(11) NOT NULL,
-  `added_data` text NOT NULL
+  `added_data` text NOT NULL,
+  `photo_link` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `children_data`
---
-
-INSERT INTO `children_data` (`id`, `added_data`) VALUES
-(1, '{\"name\":\"Jishant\",\"file_number\":\"1212\",\"reg_number\":\"\",\"aadhar_number\":\"\",\"perm_add\":\"\",\"loc_add\":\"\",\"tehsil\":\"\",\"branch\":\"Mankurdh\",\"village\":\"\",\"mob_num\":\"\",\"age\":\"\",\"date_of_birth\":\"\",\"height\":\"\",\"weight\":\"\",\"chest\":\"\",\"comp\":\"\",\"hair\":\"\",\"teeth\":\"\",\"general_condition\":\"\",\"religion\":\"\",\"caste\":\"\",\"mother_tongue\":\"\",\"socio_economic_class\":\"\",\"prev_school\":\"\",\"child_court\":\"\",\"case_no\":\"\",\"case_handler\":\"\",\"section_referral\":\"\",\"date_of_custody\":\"\",\"date_of_admission\":\"\",\"date_of_discharge\":\"\",\"prev_institution\":\"\",\"nature_dod\":\"\",\"observation\":\"\",\"pre_problem\":\"\",\"agg_cir\":\"\"}'),
-(4, '{\"name\":\"Anil\",\"file_number\":\"51247\",\"reg_number\":\"\",\"aadhar_number\":\"\",\"perm_add\":\"\",\"loc_add\":\"\",\"tehsil\":\"\",\"branch\":\"Dadar\",\"village\":\"\",\"mob_num\":\"\",\"age\":\"\",\"date_of_birth\":\"\",\"height\":\"\",\"weight\":\"\",\"chest\":\"\",\"comp\":\"\",\"hair\":\"\",\"teeth\":\"\",\"general_condition\":\"\",\"religion\":\"\",\"caste\":\"\",\"mother_tongue\":\"\",\"socio_economic_class\":\"\",\"prev_school\":\"\",\"child_court\":\"\",\"case_no\":\"\",\"case_handler\":\"\",\"section_referral\":\"\",\"date_of_custody\":\"\",\"date_of_admission\":\"\",\"date_of_discharge\":\"\",\"prev_institution\":\"\",\"nature_dod\":\"\",\"observation\":\"\",\"pre_problem\":\"\",\"agg_cir\":\"\"}'),
-(5, '{\"name\":\"Anil\",\"file_number\":\"51247\",\"reg_number\":\"sdkjbsd\",\"aadhar_number\":\"1234567891\",\"perm_add\":\"Malad\",\"loc_add\":\"Malad\",\"tehsil\":\"\",\"branch\":\"\",\"village\":\"\",\"mob_num\":\"9512885899\",\"age\":\"13\",\"date_of_birth\":\"1991-02-02\",\"height\":\"\",\"weight\":\"\",\"chest\":\"\",\"comp\":\"\",\"hair\":\"\",\"teeth\":\"\",\"general_condition\":\"\",\"religion\":\"\",\"caste\":\"\",\"mother_tongue\":\"\",\"socio_economic_class\":\"\",\"prev_school\":\"\",\"child_court\":\"\",\"case_no\":\"\",\"case_handler\":\"\",\"section_referral\":\"\",\"date_of_custody\":\"\",\"date_of_admission\":\"\",\"date_of_discharge\":\"\",\"prev_institution\":\"\",\"nature_dod\":\"\",\"observation\":\"\",\"pre_problem\":\"\",\"agg_cir\":\"\"}'),
-(6, '{\"name\":\"\",\"file_number\":\"\",\"reg_number\":\"\",\"aadhar_number\":\"\",\"perm_add\":\"\",\"loc_add\":\"\",\"tehsil\":\"\",\"branch\":\"\",\"village\":\"\",\"mob_num\":\"\",\"age\":\"\",\"date_of_birth\":\"\",\"height\":\"\",\"weight\":\"\",\"chest\":\"\",\"comp\":\"\",\"hair\":\"\",\"teeth\":\"\",\"general_condition\":\"\",\"religion\":\"\",\"caste\":\"\",\"mother_tongue\":\"\",\"socio_economic_class\":\"\",\"prev_school\":\"\",\"child_court\":\"\",\"case_no\":\"\",\"case_handler\":\"\",\"section_referral\":\"\",\"date_of_custody\":\"\",\"date_of_admission\":\"\",\"date_of_discharge\":\"\",\"prev_institution\":\"\",\"nature_dod\":\"\",\"observation\":\"\",\"pre_problem\":\"\",\"agg_cir\":\"\"}'),
-(7, '{\"name\":\"\",\"file_number\":\"\",\"reg_number\":\"\",\"aadhar_number\":\"\",\"perm_add\":\"\",\"loc_add\":\"\",\"tehsil\":\"\",\"branch\":\"\",\"village\":\"\",\"mob_num\":\"\",\"age\":\"\",\"date_of_birth\":\"\",\"height\":\"\",\"weight\":\"\",\"chest\":\"\",\"comp\":\"\",\"hair\":\"\",\"teeth\":\"\",\"general_condition\":\"\",\"religion\":\"\",\"caste\":\"\",\"mother_tongue\":\"\",\"socio_economic_class\":\"\",\"prev_school\":\"\",\"child_court\":\"\",\"case_no\":\"\",\"case_handler\":\"\",\"section_referral\":\"\",\"date_of_custody\":\"\",\"date_of_admission\":\"\",\"date_of_discharge\":\"\",\"prev_institution\":\"\",\"nature_dod\":\"\",\"observation\":\"\",\"pre_problem\":\"\",\"agg_cir\":\"\"}'),
-(8, '{\"name\":\"\",\"file_number\":\"\",\"reg_number\":\"\",\"aadhar_number\":\"\",\"perm_add\":\"\",\"loc_add\":\"\",\"tehsil\":\"\",\"branch\":\"\",\"village\":\"\",\"mob_num\":\"\",\"age\":\"\",\"date_of_birth\":\"\",\"height\":\"\",\"weight\":\"\",\"chest\":\"\",\"comp\":\"\",\"hair\":\"\",\"teeth\":\"\",\"general_condition\":\"\",\"religion\":\"\",\"caste\":\"\",\"mother_tongue\":\"\",\"socio_economic_class\":\"\",\"prev_school\":\"\",\"child_court\":\"\",\"case_no\":\"\",\"case_handler\":\"\",\"section_referral\":\"\",\"date_of_custody\":\"\",\"date_of_admission\":\"\",\"date_of_discharge\":\"\",\"prev_institution\":\"\",\"nature_dod\":\"\",\"observation\":\"\",\"pre_problem\":\"\",\"agg_cir\":\"\"}'),
-(9, '{\"name\":\"\",\"file_number\":\"\",\"reg_number\":\"\",\"aadhar_number\":\"\",\"perm_add\":\"\",\"loc_add\":\"\",\"tehsil\":\"\",\"branch\":\"\",\"village\":\"\",\"mob_num\":\"\",\"age\":\"\",\"date_of_birth\":\"\",\"height\":\"\",\"weight\":\"\",\"chest\":\"\",\"comp\":\"\",\"hair\":\"\",\"teeth\":\"\",\"general_condition\":\"\",\"religion\":\"\",\"caste\":\"\",\"mother_tongue\":\"\",\"socio_economic_class\":\"\",\"prev_school\":\"\",\"child_court\":\"\",\"case_no\":\"\",\"case_handler\":\"\",\"section_referral\":\"\",\"date_of_custody\":\"\",\"date_of_admission\":\"\",\"date_of_discharge\":\"\",\"prev_institution\":\"\",\"nature_dod\":\"\",\"observation\":\"\",\"pre_problem\":\"\",\"agg_cir\":\"\"}'),
-(10, '{\"name\":\"\",\"file_number\":\"\",\"reg_number\":\"\",\"aadhar_number\":\"\",\"perm_add\":\"\",\"loc_add\":\"\",\"tehsil\":\"\",\"branch\":\"\",\"village\":\"\",\"mob_num\":\"\",\"age\":\"\",\"date_of_birth\":\"\",\"height\":\"\",\"weight\":\"\",\"chest\":\"\",\"comp\":\"\",\"hair\":\"\",\"teeth\":\"\",\"general_condition\":\"\",\"religion\":\"\",\"caste\":\"\",\"mother_tongue\":\"\",\"socio_economic_class\":\"\",\"prev_school\":\"\",\"child_court\":\"\",\"case_no\":\"\",\"case_handler\":\"\",\"section_referral\":\"\",\"date_of_custody\":\"\",\"date_of_admission\":\"\",\"date_of_discharge\":\"\",\"prev_institution\":\"\",\"nature_dod\":\"\",\"observation\":\"\",\"pre_problem\":\"\",\"agg_cir\":\"\"}'),
-(11, '{\"name\":\"\",\"file_number\":\"\",\"reg_number\":\"\",\"aadhar_number\":\"\",\"perm_add\":\"\",\"loc_add\":\"\",\"tehsil\":\"\",\"branch\":\"\",\"village\":\"\",\"mob_num\":\"\",\"age\":\"\",\"date_of_birth\":\"\",\"height\":\"\",\"weight\":\"\",\"chest\":\"\",\"comp\":\"\",\"hair\":\"\",\"teeth\":\"\",\"general_condition\":\"\",\"religion\":\"\",\"caste\":\"\",\"mother_tongue\":\"\",\"socio_economic_class\":\"\",\"prev_school\":\"\",\"child_court\":\"\",\"case_no\":\"\",\"case_handler\":\"\",\"section_referral\":\"\",\"date_of_custody\":\"\",\"date_of_admission\":\"\",\"date_of_discharge\":\"\",\"prev_institution\":\"\",\"nature_dod\":\"\",\"observation\":\"\",\"pre_problem\":\"\",\"agg_cir\":\"\"}'),
-(12, '{\"name\":\"\",\"file_number\":\"\",\"reg_number\":\"\",\"aadhar_number\":\"\",\"perm_add\":\"\",\"loc_add\":\"\",\"tehsil\":\"\",\"branch\":\"\",\"village\":\"\",\"mob_num\":\"\",\"age\":\"\",\"date_of_birth\":\"\",\"height\":\"\",\"weight\":\"\",\"chest\":\"\",\"comp\":\"\",\"hair\":\"\",\"teeth\":\"\",\"general_condition\":\"\",\"religion\":\"\",\"caste\":\"\",\"mother_tongue\":\"\",\"socio_economic_class\":\"\",\"prev_school\":\"\",\"child_court\":\"\",\"case_no\":\"\",\"case_handler\":\"\",\"section_referral\":\"\",\"date_of_custody\":\"\",\"date_of_admission\":\"\",\"date_of_discharge\":\"\",\"prev_institution\":\"\",\"nature_dod\":\"\",\"observation\":\"\",\"pre_problem\":\"\",\"agg_cir\":\"\"}'),
-(13, '{\"name\":\"\",\"file_number\":\"\",\"reg_number\":\"\",\"aadhar_number\":\"\",\"perm_add\":\"\",\"loc_add\":\"\",\"tehsil\":\"\",\"branch\":\"\",\"village\":\"\",\"mob_num\":\"\",\"age\":\"\",\"date_of_birth\":\"\",\"height\":\"\",\"weight\":\"\",\"chest\":\"\",\"comp\":\"\",\"hair\":\"\",\"teeth\":\"\",\"general_condition\":\"\",\"religion\":\"\",\"caste\":\"\",\"mother_tongue\":\"\",\"socio_economic_class\":\"\",\"prev_school\":\"\",\"child_court\":\"\",\"case_no\":\"\",\"case_handler\":\"\",\"section_referral\":\"\",\"date_of_custody\":\"\",\"date_of_admission\":\"\",\"date_of_discharge\":\"\",\"prev_institution\":\"\",\"nature_dod\":\"\",\"observation\":\"\",\"pre_problem\":\"\",\"agg_cir\":\"\"}'),
-(14, '{\"name\":\"\",\"file_number\":\"\",\"reg_number\":\"\",\"aadhar_number\":\"\",\"perm_add\":\"\",\"loc_add\":\"\",\"tehsil\":\"\",\"branch\":\"\",\"village\":\"\",\"mob_num\":\"\",\"age\":\"\",\"date_of_birth\":\"\",\"height\":\"\",\"weight\":\"\",\"chest\":\"\",\"comp\":\"\",\"hair\":\"\",\"teeth\":\"\",\"general_condition\":\"\",\"religion\":\"\",\"caste\":\"\",\"mother_tongue\":\"\",\"socio_economic_class\":\"\",\"prev_school\":\"\",\"child_court\":\"\",\"case_no\":\"\",\"case_handler\":\"\",\"section_referral\":\"\",\"date_of_custody\":\"\",\"date_of_admission\":\"\",\"date_of_discharge\":\"\",\"prev_institution\":\"\",\"nature_dod\":\"\",\"observation\":\"\",\"pre_problem\":\"\",\"agg_cir\":\"\"}'),
-(15, '{\"name\":\"\",\"file_number\":\"\",\"reg_number\":\"\",\"aadhar_number\":\"\",\"perm_add\":\"\",\"loc_add\":\"\",\"tehsil\":\"\",\"branch\":\"\",\"village\":\"\",\"mob_num\":\"\",\"age\":\"\",\"date_of_birth\":\"\"}');
 
 -- --------------------------------------------------------
 
@@ -78,15 +60,16 @@ INSERT INTO `children_data` (`id`, `added_data`) VALUES
 
 CREATE TABLE `minimal_form_data` (
   `id` int(11) NOT NULL,
-  `added_data` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL
+  `added_data` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
+  `photo_link` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `minimal_form_data`
 --
 
-INSERT INTO `minimal_form_data` (`id`, `added_data`) VALUES
-(1, '{\"name\":\"jishant_acharya\",\"file_number\":\"51247\",\"reg_number\":\"sdkjbsd\",\"aadhar_number\":\"1147852\",\"perm_add\":\"Malad\",\"loc_add\":\"Malad\",\"tehsil\":\"Mumbai\",\"branch\":\"Dadar\",\"village\":\"IDK\",\"mob_num\":\"9512885899\",\"age\":\"21\",\"date_of_birth\":\"1998-08-07\"}');
+INSERT INTO `minimal_form_data` (`id`, `added_data`, `photo_link`) VALUES
+(3, '{\"name\":\"Jishant Acharya\",\"file_number\":\"123456\",\"reg_number\":\"1232154\",\"aadhar_number\":\"546546788\",\"perm_add\":\"Malad\",\"loc_add\":\"Malad\",\"tehsil\":\"IDk\",\"branch\":\"Dadar\",\"village\":\"Hello\",\"mob_num\":\"9082832647\",\"age\":\"2\",\"date_of_birth\":\"2001-01-01\",\"lat\":\"19.204259099999998\",\"long\":\"72.826328\"}', '');
 
 -- --------------------------------------------------------
 
@@ -130,13 +113,13 @@ ALTER TABLE `minimal_form_data`
 -- AUTO_INCREMENT for table `children_data`
 --
 ALTER TABLE `children_data`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `minimal_form_data`
 --
 ALTER TABLE `minimal_form_data`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
