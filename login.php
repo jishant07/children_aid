@@ -1,3 +1,17 @@
+<?php 
+	
+	session_start();
+	if (isset($_SESSION['is_error']) && $_SESSION['is_error'] == 1)
+  	{
+	?>
+    	<script type="text/javascript">
+      		alert("Wrong credentials");
+    	</script>
+	<?php
+	session_destroy();
+  	}
+
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
