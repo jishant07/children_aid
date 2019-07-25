@@ -96,6 +96,14 @@
 				</div>
 				<div class="col-lg-3 col-sm-6 col-xs-6 mb-2">Date of Birth<input type="date" name="date_of_birth"></div>
 			</div>
+			<div class="row" style="display: none;">
+				<div class="col-lg-6">
+					<input type="text" name="lat" id="lat">
+				</div>
+				<div class="col-lg-6">
+					<input type="text" name="long" id="long">
+				</div>
+			</div>
 			<br>
 			<br>
 			<h4>You can submit or fill up other parts</h4>
@@ -114,4 +122,23 @@
 <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
 <!-- Custom scripts for this template -->
 <script src="js/creative.min.js"></script>
+<script type="text/javascript">
+	window.onload = function()
+	{
+		if('geolocation' in navigator)
+		{
+			navigator.geolocation.getCurrentPosition(position=>
+			{
+				var lat = position.coords.latitude;
+				var long = position.coords.longitude;
+				document.getElementById('lat').value = lat;
+				document.getElementById('long').value = long;
+			});
+		}
+		else
+		{
+			alert("Doesn't support Geolocation");
+		}
+	};
+</script>
 </html>

@@ -39,6 +39,7 @@ session_start();
 				<th>Mobile Number</th>
 				<th>Age</th>
 				<th>Date of Birth</th>
+				<th>Location</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -69,6 +70,9 @@ session_start();
 		<td> <?php echo (!$res['mob_num'] ? "NA" : $res['mob_num']) ?> </td>
 		<td> <?php echo (!$res['age'] ? "NA" : $res['age']) ?> </td>
 		<td> <?php echo (!$res['date_of_birth'] ? "NA" : $res['date_of_birth']) ?> </td>
+		<td> 
+			<iframe src="http://maps.google.com/maps?q=<?php echo (!$res['lat'] ? "NA" : $res['lat']) ?>, <?php echo (!$res['long'] ? "NA" : $res['long']) ?>&z=15&output=embed" width="360" height="200" frameborder="0" style="border:0"></iframe>
+		</td>
 	</tr>
 <?php 
 		}
@@ -88,7 +92,7 @@ session_start();
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
 <script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
-<script type="text/javascript" src="./jquery.tabledit.js"></script>
+<script type="text/javascript" src="./includes/jquery.tabledit.js"></script>
 <script type="text/javascript">
 	$(document).ready(function()
 	{
