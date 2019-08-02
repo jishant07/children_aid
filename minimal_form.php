@@ -62,14 +62,22 @@
 	<!-- Main Page -->
 	<div id="main" style="margin: auto;position: relative;">
 	<!-- Part 1 Starts -->
-	<form method="post" action="minimal_data_save.php">
+	<form method="post" action="minimal_data_save.php" enctype="multipart/form-data">
 	<div class="container" id="part1">
 		<br>
+		<div class="row">
+			<div class="col-lg-6 col-sm-6 col-xs-12 mb-2" style="border: 1px solid orange;width:100%;">
+				<span style="display:flex;">Upload a Photo of the Juvenile
+				<input type="file" name="child_photo" required></span>
+			</div>
+			<div class="col-lg-6 col-sm-6 col-xs-6 mb-2">
+				<input type="text" name="name" placeholder="Name">
+			</div>
+		</div>
 			<div class="row">
-				<div class="col-lg-3 col-sm-6 col-xs-6 mb-2"><input type="text" name="name" placeholder="Name"></div>
-				<div class="col-lg-3 col-sm-6 col-xs-6 mb-2"><input type="text" name="file_number" placeholder="File Number"></div>
-				<div class="col-lg-3 col-sm-6 col-xs-6 mb-2"><input type="text" name="reg_number" placeholder="Register Number"></div>
-				<div class="col-lg-3 col-sm-6 col-xs-6 mb-2"><input type="number" name="aadhar_number" placeholder="Aadhar Number"></div>
+				<div class="col-lg-4 col-sm-6 col-xs-6 mb-2"><input type="text" name="file_number" placeholder="File Number"></div>
+				<div class="col-lg-4 col-sm-6 col-xs-6 mb-2"><input type="text" name="reg_number" placeholder="Register Number"></div>
+				<div class="col-lg-4 col-sm-6 col-xs-6 mb-2"><input type="number" name="aadhar_number" placeholder="Aadhar Number"></div>
 			</div>
 			<br>
 			<div class="row">

@@ -39,19 +39,7 @@
 	}
 	a
 	{
-		height:auto;
-		background: white;
-		color:black;
-		border:#fd7e14 2px solid;
-		border-radius: 10px;
-		padding:10px;
-	}
-	a:hover 
-	{
-		color:red !important;
-		background:#ff6a26;
-		color:white !important;
-		transition: 0.3s;
+		margin:20px;
 	}
 </style>
 </head>

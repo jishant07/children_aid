@@ -71,7 +71,7 @@ session_start();
 		<td> <?php echo (!$res['age'] ? "NA" : $res['age']) ?> </td>
 		<td> <?php echo (!$res['date_of_birth'] ? "NA" : $res['date_of_birth']) ?> </td>
 		<td> 
-			<iframe src="http://maps.google.com/maps?q=<?php echo (!$res['lat'] ? "NA" : $res['lat']) ?>, <?php echo (!$res['long'] ? "NA" : $res['long']) ?>&z=15&output=embed" width="360" height="200" frameborder="0" style="border:0"></iframe>
+			<iframe src="https://maps.google.com/maps?q=<?php echo (!$res['lat'] ? "NA" : $res['lat']) ?>,<?php echo (!$res['long'] ? "NA" : $res['long']) ?>&z=15&output=embed" width="360" height="200" frameborder="0" style="border:0"></iframe>
 		</td>
 	</tr>
 <?php 

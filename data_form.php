@@ -10,6 +10,24 @@ session_start();
  }
  ?>
 <?php include './partials/header.php'; ?>
+<style type="text/css">
+	a
+	{
+		height:auto;
+		background: white;
+		color:black;
+		border:#fd7e14 2px solid;
+		border-radius: 10px;
+		padding:10px;
+	}
+	a:hover 
+	{
+		color:red !important;
+		background:#ff6a26;
+		color:white !important;
+		transition: 0.3s;
+	}
+</style>
 <body>
 	<div style="padding-top: 130px;"></div>
 	<br>
