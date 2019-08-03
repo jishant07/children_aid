@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 25, 2019 at 05:22 PM
+-- Generation Time: Aug 03, 2019 at 06:31 PM
 -- Server version: 10.3.16-MariaDB
 -- PHP Version: 7.3.6
 
@@ -64,13 +64,6 @@ CREATE TABLE `minimal_form_data` (
   `photo_link` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `minimal_form_data`
---
-
-INSERT INTO `minimal_form_data` (`id`, `added_data`, `photo_link`) VALUES
-(3, '{\"name\":\"Jishant Acharya\",\"file_number\":\"123456\",\"reg_number\":\"1232154\",\"aadhar_number\":\"546546788\",\"perm_add\":\"Malad\",\"loc_add\":\"Malad\",\"tehsil\":\"IDk\",\"branch\":\"Dadar\",\"village\":\"Hello\",\"mob_num\":\"9082832647\",\"age\":\"2\",\"date_of_birth\":\"2001-01-01\",\"lat\":\"19.204259099999998\",\"long\":\"72.826328\"}', '');
-
 -- --------------------------------------------------------
 
 --
@@ -119,7 +112,7 @@ ALTER TABLE `children_data`
 -- AUTO_INCREMENT for table `minimal_form_data`
 --
 ALTER TABLE `minimal_form_data`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
