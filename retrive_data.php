@@ -28,6 +28,7 @@ session_start();
 			<tr>
 				<th>#</th>
 				<th>Name</th>
+				<th>Photo</th>
 				<th>Branch</th>
 				<th>File Number</th>
 				<th>Register Number</th>
@@ -92,6 +93,7 @@ session_start();
 	<tr>
 		<td> <?php echo (!$count ? "NA" : $count)  ?> </td>
 		<td> <?php echo (!$res['name'] ? "NA" : $res['name']) ?> </td>
+		<td> <img src=" <?php echo $row['photo_link']; ?> " alt="Image of the Child" height="200" width="200"> </td>
 		<td> <?php echo (!$res['branch'] ? "NA" : $res['branch']) ?> </td>
 		<td> <?php echo (!$res['file_number'] ? "NA" : $res['file_number']) ?> </td>
 		<td> <?php echo (!$res['reg_number'] ? "NA" : $res['reg_number']) ?> </td>

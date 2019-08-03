@@ -1,3 +1,15 @@
+<?php 
+session_start();
+if (isset($_SESSION['file_error']) && $_SESSION['file_error'] == 1)
+{
+?>
+   	<script type="text/javascript">
+   		alert("Some error occured");
+   	</script>
+<?php
+$_SESSION['file_error'] = 0;
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>

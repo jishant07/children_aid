@@ -1,14 +1,15 @@
 <?php 
-session_start();
- if(isset($_SESSION['is_admin']) && $_SESSION['is_admin'])
- {}
- else if(isset($_SESSION['is_worker']) && $_SESSION['is_worker'])
- {}
- else
- {
-  header("Location: login.php");
- }
- ?>
+	
+	session_start();
+	if(isset($_SESSION['is_admin']) && $_SESSION['is_admin'])
+	{}
+	else if(isset($_SESSION['is_worker']) && $_SESSION['is_worker'])
+	{}
+	else
+	{
+	 header("Location: login.php");
+	}
+?>
 <?php include './partials/header.php'; ?>
 <style type="text/css">
 	table{
@@ -28,6 +29,7 @@ session_start();
 			<tr>
 				<th>#</th>
 				<th>Name</th>
+				<th>Photo</th>
 				<th>Branch</th>
 				<th>File Number</th>
 				<th>Register Number</th>
@@ -57,8 +59,11 @@ session_start();
         	$count++;
 ?>
 	<tr>
-		<td> <?php echo (!$count ? "NA" : $count)  ?> </td>
+		<td> <?php echo $row['id']  ?> </td>
 		<td> <?php echo (!$res['name'] ? "NA" : $res['name']) ?> </td>
+		<td> 
+			<img src="<?php echo $row['photo_link']; ?>" alt="Image here" height="200" width="200">
+		</td>
 		<td> <?php echo (!$res['branch'] ? "NA" : $res['branch']) ?> </td>
 		<td> <?php echo (!$res['file_number'] ? "NA" : $res['file_number']) ?> </td>
 		<td> <?php echo (!$res['reg_number'] ? "NA" : $res['reg_number']) ?> </td>
