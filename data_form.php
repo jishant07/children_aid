@@ -36,22 +36,13 @@ else
 		color:white !important;
 		transition: 0.3s;
 	}
-<<<<<<< HEAD
-
 	body{
 		
   background:url("2011.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
    }
-
-
-=======
-	body
-	{
-		background: #03fcf0;
-	}
->>>>>>> 696e641519a4e680831b3eecb2197b06dda5e89f
 </style>
 <body>
 	<div style="background:rgba(0,0,0,0.4);">
@@ -82,8 +73,8 @@ else
 		<br>
 		<div class="row" style="padding-left: 10px;">
 			<div class="col-lg-4 col-sm-12 col-xs-12 mb-1" style="border: 1px solid orange;width:50%;">
-				<label style="display:flex;">Upload a Photo of the Juvenile:</label>
-				<input type="file" name="child_photo" required></span>
+				<label style="display:flex;color:orange;">Upload a Photo of the Juvenile:</label>
+				<input type="file" style="color:orange;" name="child_photo" required></span>
 			</div>
 		</div>
 		<hr style="border:0.5px solid lightgrey;">
@@ -91,23 +82,23 @@ else
 		<div class="row">
 			<div class="col-lg-4 col-sm-2 col-xs-12 mb-2" >
 				<label for="Name" style="color:orange;">Name:</label>
-                <input id="Name" type="text" placeholder="John" style="background-color:rgb(250, 239, 207);"  >
+                <input id="Name" type="text" placeholder="John" style="background-color:rgb(250, 239, 207);" name="name">
             </div>
 
             <div class="col-lg-4 col-sm-2 col-xs-12 mb-2" >
                 <label for="Age" style="color:orange;">Age:</label>
-                <input id="Age" type="text" placeholder="10" style="background-color:rgb(250, 239, 207);"  >
+                <input id="Age" type="text" placeholder="10" style="background-color:rgb(250, 239, 207);"  name="age">
             </div>
 
             <div class="col-lg-4 col-sm-2 col-xs-12 mb-2" >
                 <label for="DOB" style="color:orange;">Date of Birth:</label>
-                <input id="DOB" type="date" placeholder="12/4/1999" pattern={(0[1-9]|1[0-9]|2[0-9]|3[01]).(0[1-9]|1[012]).[0-9]{4}} style="background-color:rgb(250, 239, 207);" >
+                <input id="DOB" type="date" placeholder="12/4/1999" pattern={(0[1-9]|1[0-9]|2[0-9]|3[01]).(0[1-9]|1[012]).[0-9]{4}} style="background-color:rgb(250, 239, 207);" name="date_of_birth"	>
             </div>
 		</div>
 		<div class="row">
 			<div class="col-lg-4 col-sm-2 col-xs-12 mb-2" >
 				<label for="Phone" style="color:orange;">Mobile number:</label>
-                <input id="Phone" type="text" style="background-color:rgb(250, 239, 207);"   >
+                <input id="Phone" type="text" style="background-color:rgb(250, 239, 207);" name="mob_num"  >
             </div>
         </div>
 		<hr style="border:0.5px solid lightgrey;">
@@ -117,17 +108,17 @@ else
 			<div class="row">
 			<div class="col-lg-4 col-sm-4 col-xs-12 mb-2"  >
 				<label for="FNo" style="color:orange;">File number:</label>
-                <input id="FNo" type="text" style="background-color:rgb(250, 239, 207);"   >
+                <input id="FNo" type="text" style="background-color:rgb(250, 239, 207);" name="file_number"  >
             </div>
 
             <div class="col-lg-4 col-sm-4 col-xs-12 mb-2">
                 <label for="RNo" style="color:orange;">Register number:</label>
-                <input id="RNo" type="text" style="background-color:rgb(250, 239, 207);"   >
+                <input id="RNo" type="text" style="background-color:rgb(250, 239, 207);"  name="reg_number" >
             </div>
 
             <div class="col-lg-4 col-sm-4 col-xs-12 mb-2">
                 <label for="UID" style="color:orange;">Aadhar number:</label>
-                <input id="UID" type="text" placeholder="XXXX-XXXX-XXXX" pattern={[0-9]{4}.[0-9]{4}.[0-9]{4}} style="background-color:rgb(250, 239, 207);"  >
+                <input id="UID" type="text" placeholder="XXXX-XXXX-XXXX" pattern={[0-9]{4}.[0-9]{4}.[0-9]{4}} style="background-color:rgb(250, 239, 207);" name="aadhar_number" >
             </div>
 		</div> 
         <hr style="border:0.5px solid lightgrey;">
@@ -148,17 +139,17 @@ else
 		<div class="row">
 			<div class="col-lg-4 col-sm-4 col-xs-12 mb-2"  >
 				<label for="Tehsil" style="color:orange;">Tehsil:</label>
-                <input id="Tehsil" type="text" name="Tehsil" style="background-color:rgb(250, 239, 207);"   >
+                <input id="Tehsil" type="text" name="tehsil" style="background-color:rgb(250, 239, 207);"   >
             </div>
 
             <div class="col-lg-4 col-sm-4 col-xs-12 mb-2"  >
                 <label for="Branch" style="color:orange;">Branch:</label>
-                <input id="Branch" type="text" name="Branch" style="background-color:rgb(250, 239, 207);"  >
+                <input id="Branch" type="text" name="branch" style="background-color:rgb(250, 239, 207);"  >
             </div>
 
             <div class="col-lg-4 col-sm-4 col-xs-12 mb-2"  >
                 <label for="Village" style="color:orange;">Village:</label>
-                <input id="Village" type="text" name="Village" style="background-color:rgb(250, 239, 207);"  >
+                <input id="Village" type="text" name="village" style="background-color:rgb(250, 239, 207);"  >
             </div>
            </div>
             
@@ -443,10 +434,10 @@ else
 			<hr style="padding-bottom: 20px">
 			<button style="margin:0 50%;padding: 15px 40px;margin-top: 20px;" class="btn btn-primary" value="Submit">Submit</button>
 			<hr>
-			<br>
-			<br>
 		</div>
 	</form>
+	<br>
+	<br>
 	</div>
 </div>
 </body>

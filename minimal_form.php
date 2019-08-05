@@ -39,6 +39,7 @@ $_SESSION['file_error'] = 0;
 		background:url(2011.jpg);
 		background-size: cover;
 		background-repeat: no-repeat;
+		background-attachment: fixed;
 	}
 	*
 	{
@@ -86,8 +87,8 @@ $_SESSION['file_error'] = 0;
 		<br>
 		<div class="row" style="padding-left:15px">
 			<div class="col-lg-6 col-sm-6 col-xs-12 mb-2" style="border: 1px solid orange;width:100%;padding-left: 20px; ">
-				<span style="display:flex; padding-left: 25px;font-weight: bold;font-family: monospace;">Upload a Photo of the Juvenile
-				<input type="file" name="child_photo" required></span>
+				<span style="display:flex; padding-left: 25px;font-weight: bold;font-family: monospace;color: orange;">Upload a Photo of the Juvenile
+				<input type="file" style="color:orange;" name="child_photo" required></span>
 			</div>
 			<br>
 		</div>
@@ -109,8 +110,8 @@ $_SESSION['file_error'] = 0;
 					<input id="reg_number" type="text" name="reg_number" >
 				</div>
 				<div class="col-lg-4 col-sm-6 col-xs-12 mb-2">
-					<label for="aadhar_number" style="color:orange;>Aadhar number:</label>
-					<input id="aadhar_number" type="number" name="aadhar_number" >
+					<label for="aadhar_number" style="color:orange;">Aadhar number:</label>
+					<input type="number" name="aadhar_number">
 				</div>
 		</div>
 			<br>
