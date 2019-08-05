@@ -15,6 +15,10 @@
 	table{
   max-width: none
 }
+body
+{
+	background: #03fcf0;
+}
 .container
 {
 	width: 80% !important;

@@ -36,6 +36,10 @@ else
 		color:white !important;
 		transition: 0.3s;
 	}
+	body
+	{
+		background: #03fcf0;
+	}
 </style>
 <body>
 	<div style="padding-top: 130px;"></div>

@@ -12,7 +12,11 @@ session_start();
 <?php include './partials/header.php'; ?>
 <style type="text/css">
 	table{
-  max-width: none
+  max-width: none;
+}
+body
+{
+	background: #03fcf0;
 }
 .container
 {
@@ -23,7 +27,7 @@ session_start();
 <div style="padding: 30px;padding-bottom:10px;background:#f4623a;" class="fixed-top"></div>
 <br>
 <div class="container">
-	<table id="table_id" class="table table-responsive table-hover table-bordered table-stripped">
+	<table id="table_id" class="table table-responsive table-hover table-bordered table-stripped bg-light">
 		<thead>
 			<tr>
 				<th>#</th>
