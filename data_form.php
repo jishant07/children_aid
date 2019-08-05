@@ -36,100 +36,175 @@ else
 		color:white !important;
 		transition: 0.3s;
 	}
+<<<<<<< HEAD
+
+	body{
+		
+  background:url("2011.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+   }
+
+
+=======
 	body
 	{
 		background: #03fcf0;
 	}
+>>>>>>> 696e641519a4e680831b3eecb2197b06dda5e89f
 </style>
 <body>
-	<div style="padding-top: 130px;"></div>
+	<div style="background:rgba(0,0,0,0.4);">
+	<div style="padding-top: 20px;"></div>
 	<br>
 	<br>
-	<div class="container">
+	<div class="container" style="padding-bottom: 30px;" >
 		<div class="row">
-			<div class="col-lg-3 col-sm-6 col-xs-6 mb-2">
-				<button id="part1_button" class="btn btn-info">Basic Information</button>
+			<div class="col-lg-3 col-sm-6 col-xs-6 mb-2" >
+				<button id="part1_button" class="btn btn-info" style="padding: 10px 30px; border:0.2px solid white;background-color:steelblue">Basic Information</button>
 			</div>
-			<div class="col-lg-3 col-sm-6 col-xs-6 mb-2">
-				<button id="part2_button" class="btn btn-info">Appearance Details</button>
+			<div class="col-lg-3 col-sm-6 col-xs-6 mb-2" >
+				<button id="part2_button" class="btn btn-info" style="padding: 10px 30px; border:0.2px solid white;background-color:steelblue">Appearance Details</button>
 			</div>
-			<div class="col-lg-3 col-sm-6 col-xs-6 mb-2">
-				<button id="part3_button" class="btn btn-info">Schooling & Court</button>
+			<div class="col-lg-3 col-sm-6 col-xs-6 mb-2" >
+				<button id="part3_button" class="btn btn-info" style="padding: 10px 30px; border:0.2px solid white;background-color:steelblue" >Schooling & Court</button>
 			</div>
-			<div class="col-lg-3 col-sm-6 col-xs-6 mb-2"><button id="part4_button" class="btn btn-info">Health & Misc.</button></div>
+			<div class="col-lg-3 col-sm-6 col-xs-6 mb-2" >
+				<button id="part4_button" class="btn btn-info" style="padding: 10px 30px; border:0.2px solid white;background-color:steelblue">Health & Misc.</button>
+				</div>
 		</div>
 	</div>
 	<!-- Main Page -->
-	<div id="main" style="margin: auto;position: relative;">
-	<!-- Part 1 Starts -->
-	<form method="post" action="data_save.php" enctype="multipart/form-data">
-	<div class="container" id="part1">
+	<div id="main" style="margin: auto;position: relative;" >
+	<!-- Part 1 Starts --> 
+	<form method="post" action="data_save.php" enctype="multipart/form-data" >
+	<div class="container" id="part1" style="border:0.5px solid black;">
 		<br>
-		<div class="row">
-			<div class="col-lg-6 col-sm-6 col-xs-12 mb-2" style="border: 1px solid orange;width:100%;">
-				<span style="display:flex;">Upload a Photo of the Juvenile
+		<div class="row" style="padding-left: 10px;">
+			<div class="col-lg-4 col-sm-12 col-xs-12 mb-1" style="border: 1px solid orange;width:50%;">
+				<label style="display:flex;">Upload a Photo of the Juvenile:</label>
 				<input type="file" name="child_photo" required></span>
 			</div>
-			<div class="col-lg-6 col-sm-6 col-xs-6 mb-2">
-				<input type="text" name="name" placeholder="Name">
-			</div>
 		</div>
+		<hr style="border:0.5px solid lightgrey;">
+        <br>
+		<div class="row">
+			<div class="col-lg-4 col-sm-2 col-xs-12 mb-2" >
+				<label for="Name" style="color:orange;">Name:</label>
+                <input id="Name" type="text" placeholder="John" style="background-color:rgb(250, 239, 207);"  >
+            </div>
+
+            <div class="col-lg-4 col-sm-2 col-xs-12 mb-2" >
+                <label for="Age" style="color:orange;">Age:</label>
+                <input id="Age" type="text" placeholder="10" style="background-color:rgb(250, 239, 207);"  >
+            </div>
+
+            <div class="col-lg-4 col-sm-2 col-xs-12 mb-2" >
+                <label for="DOB" style="color:orange;">Date of Birth:</label>
+                <input id="DOB" type="date" placeholder="12/4/1999" pattern={(0[1-9]|1[0-9]|2[0-9]|3[01]).(0[1-9]|1[012]).[0-9]{4}} style="background-color:rgb(250, 239, 207);" >
+            </div>
+		</div>
+		<div class="row">
+			<div class="col-lg-4 col-sm-2 col-xs-12 mb-2" >
+				<label for="Phone" style="color:orange;">Mobile number:</label>
+                <input id="Phone" type="text" style="background-color:rgb(250, 239, 207);"   >
+            </div>
+        </div>
+		<hr style="border:0.5px solid lightgrey;">
+		<br>
+		<br>
+
 			<div class="row">
-				<div class="col-lg-4 col-sm-6 col-xs-6 mb-2"><input type="text" name="file_number" placeholder="File Number"></div>
-				<div class="col-lg-4 col-sm-6 col-xs-6 mb-2"><input type="text" name="reg_number" placeholder="Register Number"></div>
-				<div class="col-lg-4 col-sm-6 col-xs-6 mb-2"><input type="number" name="aadhar_number" placeholder="Aadhar Number"></div>
-			</div>
+			<div class="col-lg-4 col-sm-4 col-xs-12 mb-2"  >
+				<label for="FNo" style="color:orange;">File number:</label>
+                <input id="FNo" type="text" style="background-color:rgb(250, 239, 207);"   >
+            </div>
+
+            <div class="col-lg-4 col-sm-4 col-xs-12 mb-2">
+                <label for="RNo" style="color:orange;">Register number:</label>
+                <input id="RNo" type="text" style="background-color:rgb(250, 239, 207);"   >
+            </div>
+
+            <div class="col-lg-4 col-sm-4 col-xs-12 mb-2">
+                <label for="UID" style="color:orange;">Aadhar number:</label>
+                <input id="UID" type="text" placeholder="XXXX-XXXX-XXXX" pattern={[0-9]{4}.[0-9]{4}.[0-9]{4}} style="background-color:rgb(250, 239, 207);"  >
+            </div>
+		</div> 
+        <hr style="border:0.5px solid lightgrey;">
+        <br>
+        
+        <br>
+		<div class="row">
+				<div class="col-lg-6 col-sm-6 col-xs-6 mb-2">
+					<label for="P_addr" style="color:orange;">Permanent Address:</label>
+					<textarea id="P_addr"style="width:100%;" name="perm_add" style="background-color:rgb(250, 239, 207);"></textarea>
+				</div>
+				<div class="col-lg-6 col-sm-6 col-xs-6 mb-2">
+					<label for="L_addr" style="color:orange;">Local Address:</label>
+					<textarea  id="L_addr"style="width:100%;" name="loc_add" style="background-color:rgb(250, 239, 207);" ></textarea>
+				</div>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-4 col-sm-4 col-xs-12 mb-2"  >
+				<label for="Tehsil" style="color:orange;">Tehsil:</label>
+                <input id="Tehsil" type="text" name="Tehsil" style="background-color:rgb(250, 239, 207);"   >
+            </div>
+
+            <div class="col-lg-4 col-sm-4 col-xs-12 mb-2"  >
+                <label for="Branch" style="color:orange;">Branch:</label>
+                <input id="Branch" type="text" name="Branch" style="background-color:rgb(250, 239, 207);"  >
+            </div>
+
+            <div class="col-lg-4 col-sm-4 col-xs-12 mb-2"  >
+                <label for="Village" style="color:orange;">Village:</label>
+                <input id="Village" type="text" name="Village" style="background-color:rgb(250, 239, 207);"  >
+            </div>
+           </div>
+            
+            <hr style="border:0.5px solid lightgrey;">
 			<br>
-			<div class="row">
-				<div class="col-lg-3 col-sm-6 col-xs-6 mb-2">
-					<textarea style="width:100%;" name="perm_add" placeholder="Permanent Address"></textarea>
-				</div>
-				<div class="col-lg-3 col-sm-6 col-xs-6 mb-2">
-					<textarea style="width:100%;" name="loc_add" placeholder="Local Address"></textarea>
-				</div>
-				<div class="col-lg-3 col-sm-6 col-xs-6 mb-2">
-					<input type="text" name="tehsil" placeholder="Tehsil">
-				</div>
-				<div class="col-lg-3 col-sm-6 col-xs-6 mb-2">
-					<input type="text" name="branch" placeholder="Branch">
-				</div>
-			</div>
 			<br>
-			<div class="row">
-				<div class="col-lg-3 col-sm-6 col-xs-6 mb-2"><input type="text" name="village" placeholder="village"></div>
-				<div class="col-lg-3 col-sm-6 col-xs-6 mb-2">
-					<input type="number" name="mob_num" placeholder="Mobile Number">
-				</div>
-				<div class="col-lg-3 col-sm-6 col-xs-6 mb-2"><input type="number" name="age" placeholder="Age">
-				</div>
-				<div class="col-lg-3 col-sm-6 col-xs-6 mb-2">Date of Birth<input type="date" name="date_of_birth"></div>
-			</div>
-			<br>
-			<br>
-			<h4>You can submit or fill up other parts</h4>
-				<button class="btn btn-primary" value="Submit">Submit</button>
+			<h3 style="color: white">You can submit or fill up other parts</h3>
+				<button style="margin:0 50%;padding: 10px 30px;" class="btn btn-primary" value="Submit">Submit</button>
 				<br>
 				<br>
 	</div>
 	<!-- Part 1 Ends -->
 
 	<!-- Part 2 Startes -->
-	<div class="container" id="part2" style="display:none;">
+	<div class="container" id="part2" style="display:none; border:0.5px solid black">
+
 			<br>
 			<div class="row">
-				<div class="col-lg-3 col-sm-6 col-xs-6 mb-2">
-					<input type="number" name="height" placeholder="Height">
+				 <div class="col-lg-4 col-sm-6 col-xs-6 mb-2">
+	            	<label for="rel"  style="color:orange;">Religion:</label>
+					<input id="rel" type="text" name="religion" style="background-color:rgb(250, 239, 207);">
 				</div>
-				<div class="col-lg-3 col-sm-6 col-xs-6 mb-2">
-					<input type="number" name="weight" placeholder="Weight">
+				<div class="col-lg-4 col-sm-6 col-xs-6 mb-2">
+					<label for="caste"  style="color:orange;">Caste:</label>
+					<input id="caste" type="text" name="caste" style="background-color:rgb(250, 239, 207);" >
 				</div>
-				<div class="col-lg-3 col-sm-6 col-xs-6 mb-2"><input type="number" name="chest" placeholder="Chest"></div>
-				<div class="col-lg-3 col-sm-6 col-xs-6 mb-2"><input type="text" name="comp" placeholder="Complexion"></div>
-			</div>
+			
+			
+			<br>
+			 <hr style="border:0.5px solid lightgrey;">
+			<div class="row" style="padding-left: 15px">
+				<div class="col-lg-4 col-sm-6 col-xs-6 mb-2">
+			    		<label for="hair"  style="color:orange;">Hair:</label>
+					    <input id="hair" type="text" name="hair" placeholder="wavy" style="background-color:rgb(250, 239, 207);">
+				    </div>
+				    <div class="col-lg-4 col-sm-6 col-xs-6 mb-2">
+				    	<label for="comp"  style="color:orange;">Complexion:</label>
+				    	<input id="comp" type="text" name="comp" placeholder="dark" style="background-color:rgb(250, 239, 207);">
+				    </div>
+				</div>
+			</div>	
 			<br>
 			<div class="row">
-				<div class="col-lg-3 col-sm-6 col-xs-6 mb-2">
-					<select name="eye_color">
+				<div class="col-lg-3 col-sm-4 col-xs-6 mb-2">
+					<label for="eye_color"  style="color:orange;">Eyes:</label>
+					<select id="eye_color" name="eye_color" style="background-color:rgb(250, 239, 207);">
 						<option selected disabled>Select an Eye Colour</option>
 						<option value="Black">Balck</option>
 						<option>Brown</option>
@@ -139,8 +214,9 @@ else
 						<option>Other</option>
 					</select>
 				</div>
-				<div class="col-lg-3 col-sm-6 col-xs-6 mb-2">
-					<select name="nose_type">
+				<div class="col-lg-3 col-sm-4 col-xs-6 mb-2">
+					<label for="nose_type"  style="color:orange;">Noes:</label>
+					<select id="nose_type" name="nose_type" style="background-color:rgb(250, 239, 207);">
 						<option selected disabled>Select Nose Type</option>
 						<option>Turned- Up</option>
 						<option>Roman</option>
@@ -150,17 +226,9 @@ else
 						<option>Other</option>
 					</select>
 				</div>
-				<div class="col-lg-3 col-sm-6 col-xs-6 mb-2">
-					<input type="text" name="hair" placeholder="Hair">
-				</div>
-				<div class="col-lg-3 col-sm-6 col-xs-6 mb-2">
-					<input type="number" name="teeth" placeholder="No of Teeth">
-				</div>
-			</div>
-			<br>
-			<div class="row">
-				<div class="col-lg-3 col-sm-6 col-xs-6 mb-2">
-					<select name="lip_type">
+				<div class="col-lg-3 col-sm-4 col-xs-6 mb-2">
+					<label for="lip_type"  style="color:orange;">Lips</label>
+					<select id="lip_type" name="lip_type" style="background-color:rgb(250, 239, 207);">
 						<option selected disabled>Select lips type</option>
 						<option>Heart Shaped</option>
 						<option>Thin</option>
@@ -170,49 +238,73 @@ else
 						<option>Other</option>
 					</select>
 				</div>
-				<div class="col-lg-3 col-sm-6 col-xs-6 mb-2">
-					<textarea style="width:100%" placeholder="General Condition" name="general_condition"></textarea>
-				</div>
-				<div class="col-lg-3 col-sm-6 col-xs-6 mb-2">
-					<input type="text" name="religion" placeholder="Religion">
-				</div>
-				<div class="col-lg-3 col-sm-6 col-xs-6 mb-2">
-					<input type="text" name="caste" placeholder="Caste">
-				</div>
 			</div>
 			<br>
+			<div class="row">
+				<div class="col-lg-3 col-sm-6 col-xs-12 mb-2">
+					   <label for="Height"  style="color:orange;">Height:</label>
+					   <input id="Height" type="number" name="height" style="background-color:rgb(250, 239, 207);">
+				    </div>
+				    <div class="col-lg-3 col-sm-6 col-xs-12 mb-2">
+				        <label for="Wight"  style="color:orange;">Weight:</label>
+					    <input id="Weight"type="number" name="weight" style="background-color:rgb(250, 239, 207);" >
+					</div>
+				
+				
+				
+					<div class="col-lg-3 col-sm-6 col-xs-12 mb-2">
+						<label for="chest"  style="color:orange;">Chest:</label>
+						<input id="chest" type="number" name="chest" style="background-color:rgb(250, 239, 207);" >
+					</div>
+				    <div class="col-lg-3 col-sm-6 col-xs-12 mb-2">
+				    	<label for="teeth"  style="color:orange;">No.of teeth:</label>
+                        <input id="teeth" type="number" name="teeth" style="background-color:rgb(250, 239, 207);" >
+				    </div>
+			</div>
 			<br>
+			 <hr style="border:0.5px solid lightgrey;">
+			<div class="row">
+                  <div class="col-lg-4 col-sm-6 col-xs-6 mb-2">
+					<label for="general_condition"  style="color:orange;">General condition:</label>
+					<textarea id="general_condition" style="width:100%"  name="general_condition" style="background-color:rgb(250, 239, 207);"></textarea>
+				</div>
+			</div>
+
 			<br>
-			<h4>You can submit or fill up other parts</h4>
-				<button class="btn btn-primary" value="Submit">Submit</button>
+			<h3 style="color: white">You can submit or fill up other parts</h3>
+				<button  style="margin:0 50%;padding: 10px 30px;"class="btn btn-primary" value="Submit">Submit</button>
 				<br>
 				<br>
 	</div>
+
 	<!-- Part 2 Ends -->
 
 	<!-- Part 3 Starts -->
-	<div class="container" id="part3" style="display:none;">
+	<div class="container" id="part3" style="display:none; border:1px solid black">
 			<br>
+			
 			<div class="row">
-				<div class="col-lg-3 col-sm-6 col-xs-6 mb-2">
+				<div class="col-lg-6 col-sm-6 col-xs-6 mb-2">
 					<a id="add_language">Add Language</a>
-					<br>
-					<br>
+					<a  id="remove_language">Remove Language</a>
+					<br><br>
 					<div id="language_div"></div>
-					<br>
-					<a id="remove_language">Remove Language</a>
-					<br>
-					<br>
 				</div>
-				<div class="col-lg-3 col-sm-6 col-xs-6 mb-2">
-					<input type="text" name="mother_tongue" placeholder="Mother Tongue">
+				<div class="col-lg-6 col-sm-6 col-xs-6 mb-2">
+					<label for="mother_tongue" style="color:orange;">Mother tongue:</label>
+					<input id="mother_tongue" type="text" name="mother_tongue" style="background-color:rgb(250, 239, 207);" >
 				</div>
-				<div class="col-lg-3 col-sm-6 col-xs-6 mb-2">
-					<input type="text" name="socio_economic_class" placeholder="Socio Economic Class">
+			</div>
+			<br>
+			<hr style="border:0.5px solid lightgrey;">
+            <div class="row">
+			    <div class="col-lg-4 col-sm-6 col-xs-6 mb-2">
+					<label for="Socio Economic Class" style="color:orange;">Socio Economic Class:</label>
+					<input id="Socio Economic Class" type="text" name="socio_economic_class" style="background-color:rgb(250, 239, 207);">
 				</div>
-				<div class="col-lg-3 col-sm-6 col-xs-6 mb-2">
-					<label>Literacy level</label>
-					<select name="lit_level" placeholder="Literacy Level">
+				<div class="col-lg-4 col-sm-6 col-xs-6 mb-2">
+					<label for="lit_level" style="color:orange;">Literacy level:</label>
+					<select id="lit_level" name="lit_level" style="background-color:rgb(250, 239, 207);" >
 						<option selected disabled>Select Literacy Level</option>
 						<option>High</option>
 						<option>Medium</option>
@@ -221,27 +313,62 @@ else
 				</div>
 			</div>
 			<br>
+			<hr style="border:0.5px solid lightgrey;">
 			<div class="row">
-				<div class="col-lg-3 col-sm-6 col-xs-6 mb-2">
-					<input type="text" name="prev_school" placeholder="Previous School">
+				<div class="col-lg-4 col-sm-6 col-xs-6 mb-2">
+					<label for="prev_school" style="color:orange;">Previous School:</label>
+					<input id="prev_school" type="text" name="prev_school" style="background-color:rgb(250, 239, 207);" >
 				</div>
-				<div class="col-lg-3 col-sm-6 col-xs-6 mb-2">
-					<input type="text" name="child_court" placeholder="Children Court">
-				</div>
-				<div class="col-lg-3 col-sm-6 col-xs-6 mb-2">
-					<input type="text" name="case_no" placeholder="Case Number">
-				</div>
-				<div class="col-lg-3 col-sm-6 col-xs-6 mb-2">
-					<input type="text" name="case_handler" placeholder="Case Handler">
+				<div class="col-lg-4 col-sm-6 col-xs-6 mb-2">
+					<label for="is_repeater" style="color:orange;">Repeater status:</label>
+					<select id="is_repeater" name="is_repeater" style="background-color:rgb(250, 239, 207);">
+						<option selected disabled>Select repeater status</option>
+						<option>Yes</option>
+						<option>No</option>
+						<option>Don't know</option>
+					</select>
 				</div>
 			</div>
 			<br>
 			<div class="row">
-				<div class="col-lg-3 col-sm-6 col-xs-6 mb-2">
-					<input type="text" name="section_referral" placeholder="Section Referral">
+				<div class="col-lg-4 col-sm-6 col-xs-6 mb-2">
+					<label for="prev_institution" style="color:orange;">Previous institution:</label>
+					<input id="prev_institution" type="text" name="prev_institution" style="background-color:rgb(250, 239, 207);" >
 				</div>
-				<div class="col-lg-3 col-sm-6 col-xs-6 mb-2">
-					<select name="status">
+				<div class="col-lg-4 col-sm-6 col-xs-6 mb-2">
+					<label for="date_of_admission" style="color:orange;">Date of Addmission:</label>
+					<input id="date_of_admission" type="date" name="date_of_admission" placeholder="DD/MM/YYYY" style="background-color:rgb(250, 239, 207);">
+				</div>
+				<div class="col-lg-4 col-sm-6 col-xs-6 mb-2">
+					<label for="date_of_discharge" style="color:orange;">Date of Discharge:</label>
+					 <input id="date_of_discharge" type="date" name="date_of_discharge" placeholder="DD/MM/YYYY" style="background-color:rgb(250, 239, 207);">
+				</div>
+			</div>
+			<br>
+			<hr style="border:0.5px solid lightgrey;">
+			<div class="row">
+				<div class="col-lg-4 col-sm-6 col-xs-6 mb-2">
+					<label for="child_court" style="color:orange;">Children Court:</label>
+					<input id="child_court" type="text" name="child_court" style="background-color:rgb(250, 239, 207);" >
+				</div>
+				<div class="col-lg-4 col-sm-6 col-xs-6 mb-2">
+					<label for="case_no" style="color:orange;">Case Number:</label>
+					<input id="case_no" type="text" name="case_no" style="background-color:rgb(250, 239, 207); ">
+				</div>
+				<div class="col-lg-4 col-sm-6 col-xs-6 mb-2">
+					<label for="case_handler" style="color:orange;">Case Handler:</label>
+					<input id="case_handler" type="text" name="case_handler" style="background-color:rgb(250, 239, 207);" >
+				</div>
+			</div>
+				
+			<div class="row">
+				<div class="col-lg-4 col-sm-6 col-xs-6 mb-2">
+				<label for="section_referral" style="color:orange;">Section Referral:</label>
+					<input id="section_referral" type="text" name="section_referral" style="background-color:rgb(250, 239, 207);" >
+				</div>
+				<div class="col-lg-4 col-sm-6 col-xs-6 mb-2">
+					<label for="status" style="color:orange;">Child Status:</label>
+					<select id="status" name="status" style="background-color:rgb(250, 239, 207);">
 						<option disabled selected>Select child status</option>
 						<option>CCL</option>
 						<option>Child Labour</option>
@@ -249,83 +376,78 @@ else
 						<option>Others</option>
 					</select>
 				</div>
-				<div class="col-lg-3 col-sm-6 col-xs-6 mb-2">
-					Date of Custody
-					<input type="date" name="date_of_custody" placeholder="Date of Custody">
-				</div>
-				<div class="col-lg-3 col-sm-6 col-xs-6 mb-2">
-					Date of Addmission
-					<input type="date" name="date_of_admission" placeholder="Date of Addmission">
+				<div class="col-lg-4 col-sm-6 col-xs-6 mb-2">
+					<label for="date_of_custody" style="color:orange;" >Date of Custody:</label>
+					<input id="date_of_custody" type="date" name="date_of_custody" style="background-color:rgb(250, 239, 207);">
 				</div>
 			</div>
 			<br>
-			<div class="row">
-				<div class="col-lg-3 col-sm-6 col-xs-6 mb-2">
-					<select name="is_repeater">
-						<option selected disabled>Select repeater status</option>
-						<option>Yes</option>
-						<option>No</option>
-						<option>Don't know</option>
-					</select>
-				</div>
-				<div class="col-lg-3 col-sm-6 col-xs-6 mb-2">
-					Date of Discharge <input type="date" name="date_of_discharge" placeholder="Date of Discharge">
-				</div>
-				<div class="col-lg-3 col-sm-6 col-xs-6 mb-2">
-					<input type="text" name="prev_institution" placeholder="Previous Institution">
-				</div>
-			</div>
 			<br>
-			<h4>You can submit or fill up other parts</h4>
-				<button class="btn btn-primary" value="Submit">Submit</button>
+			
+			<h3 style="color:white">You can submit or fill up other parts</h3>
+				<button style="margin:0 50%;padding: 10px 30px;" class="btn btn-primary" value="Submit">Submit</button>
 				<br>
-				<br>
-			<br>
-			<br>
+				<
+
 		</div>
 		<!-- Part 3 Ends -->
 
 		<!-- Part 4 Starts -->
-		<div class="container" id="part4" style="display: none;">
+		<div class="container" id="part4" style="display: none; border:1px solid black;">
 			<br>
 			<br>
 			<div class="row">
 				<div class="col-lg-1">
-					<a id="add_mediacal_details" style="text-align:left;float:left;">Add</a>
+					<a id="add_mediacal_details" style="text-align:left;float:left;background-color:rgb(250, 239, 207);">Add</a>
 				</div>
-				<div class="col-lg-3" id="medical"><h3>Medical</h3>
+				<div style="color:orange;" class="col-lg-3" id="medical"><h3>Medical</h3>
 				<br>
 				</div>
-				<div class="col-lg-3" id="psychological"><h3>Psychological</h3>
+				<div style="color:orange;" class="col-lg-3" id="psychological"><h3>Psychological</h3>
 				<br>
 				</div>
-				<div class="col-lg-3" id="psychiatric"><h3>Psychiatric</h3>
+				<div  style="color:orange;"  class="col-lg-3" id="psychiatric"><h3>Psychiatric</h3>
 				<br>
-				</div>
+                </div>
 				<div class="col-lg-2" style="width:100%">
-					<span id='rem_medical_det'><a style="text-align:right;float:right;">Remove</a></span>
+					<span id='rem_medical_det'><a style="text-align:right;float:right;background-color:rgb(250, 239, 207)">Remove</a></span>
+				</div>
+			</div>
+			<hr style="border:0.5px solid lightgrey;">
+			<br>
+			<br>
+			<div class="row">
+				<div class="col-lg-6 col-sm-6 col-xs-6 mb-2">
+					<label for="nature_dod" style="color:orange;">Nature and Date of Disposal:</label>
+				    <textarea style="background-color:rgb(250, 239, 207)" id="nature_dod" name="nature_dod" ></textarea>
+				</div>
+				    <div class="col-lg-6 col-sm-6 col-xs-6 mb-2">
+				        <label for="observation" style="color:orange;">Observation:</label>
+				         <textarea style="background-color:rgb(250, 239, 207)" id="observation" name="observation" ></textarea>
+				</div>
+		    </div>
+		    <br>
+		    <br>
+		    <div class="row">
+				<div class="col-lg-6 col-sm-6 col-xs-6 mb-2">
+					<label for="pre_problem" style="color:orange;">Present problem:</label>
+				    <textarea style="background-color: rgb(247, 234, 195);" id="pre_problem" name="pre_problem"></textarea>
+				</div>
+				<div class="col-lg-6 col-sm-6 col-xs-6 mb-2">
+                     <label for="agg_cir" style="color:orange;">Aggravating Circumstances:</label>
+				    <textarea style="background-color:rgb(250, 239, 207);" id="agg_cir" name="agg_cir" ></textarea>
 				</div>
 			</div>
 			<br>
 			<br>
-			<div class="col-lg-3 col-sm-6 col-xs-6 mb-2">
-				<textarea name="nature_dod" placeholder="Nature and Date of Disposal"></textarea>
-			</div>
-			<div class="col-lg-3 col-sm-6 col-xs-6 mb-2">
-				<textarea name="observation" placeholder="Observation"></textarea>
-			</div>
-			<div class="col-lg-3 col-sm-6 col-xs-6 mb-2">
-				<textarea name="pre_problem" placeholder="Present Problem"></textarea>
-			</div>
-			<div class="col-lg-3 col-sm-6 col-xs-6 mb-2">
-				<textarea name="agg_cir" placeholder="Aggravating Circumstances"></textarea>
-			</div>
-			<br>
-			<button class="btn btn-primary" value="Submit">Submit</button>
+			<hr style="padding-bottom: 20px">
+			<button style="margin:0 50%;padding: 15px 40px;margin-top: 20px;" class="btn btn-primary" value="Submit">Submit</button>
+			<hr>
 			<br>
 			<br>
 		</div>
 	</form>
+	</div>
 </div>
 </body>
 <script src="vendor/jquery/jquery.min.js"></script>
@@ -365,7 +487,7 @@ else
     		hide_all();
     		$('#part4').fadeIn("slow");
     	});
-		var med_count = $('#medical').length;
+        var med_count = $('#medical').length;
 		$("#add_mediacal_details").on("click",function()
 		{
 			med_count++;

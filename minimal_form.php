@@ -35,6 +35,11 @@ $_SESSION['file_error'] = 0;
 <link rel="stylesheet" type="text/css" href="Editor-1.9.0/css/editor.dataTables.css">
  
 <style type="text/css">
+	body{
+		background:url(2011.jpg);
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
 	*
 	{
 		font-size: 15px;
@@ -48,6 +53,7 @@ $_SESSION['file_error'] = 0;
 	.container
 	{
 		width:80% !important;
+		border:1px solid black;
 	}
 	a
 	{
@@ -68,7 +74,8 @@ $_SESSION['file_error'] = 0;
 </style>
 </head>
 <body>
-	<div style="padding-top: 130px;"></div>
+	<div style="background:rgba(0,0,0,0.5);">
+	<div style="padding-top: 80px;"></div>
 	<br>
 	<br>
 	<!-- Main Page -->
@@ -77,45 +84,79 @@ $_SESSION['file_error'] = 0;
 	<form method="post" action="minimal_data_save.php" enctype="multipart/form-data">
 	<div class="container" id="part1">
 		<br>
-		<div class="row">
-			<div class="col-lg-6 col-sm-6 col-xs-12 mb-2" style="border: 1px solid orange;width:100%;">
-				<span style="display:flex;">Upload a Photo of the Juvenile
+		<div class="row" style="padding-left:15px">
+			<div class="col-lg-6 col-sm-6 col-xs-12 mb-2" style="border: 1px solid orange;width:100%;padding-left: 20px; ">
+				<span style="display:flex; padding-left: 25px;font-weight: bold;font-family: monospace;">Upload a Photo of the Juvenile
 				<input type="file" name="child_photo" required></span>
 			</div>
+			<br>
+		</div>
+        
+        <div class="row">
 			<div class="col-lg-6 col-sm-6 col-xs-6 mb-2">
-				<input type="text" name="name" placeholder="Name">
+				<label for="name" style="color:orange;">Name:</label>
+				<input id="name" type="text" name="name" >
 			</div>
 		</div>
+		<br>	
+		<div class="row">
+				<div class="col-lg-4 col-sm-6 col-xs-12 mb-2">
+					<label for="file_number" style="color:orange;">File number:</label>
+					<input id="file_number" type="text" name="file_number" >
+				</div>
+				<div class="col-lg-4 col-sm-6 col-xs-12 mb-2">
+					<label for="reg_number" style="color:orange;">Register number:</label>
+					<input id="reg_number" type="text" name="reg_number" >
+				</div>
+				<div class="col-lg-4 col-sm-6 col-xs-12 mb-2">
+					<label for="aadhar_number" style="color:orange;>Aadhar number:</label>
+					<input id="aadhar_number" type="number" name="aadhar_number" >
+				</div>
+		</div>
+			<br>
+			<hr style="border:0.5px solid lightgrey">
 			<div class="row">
-				<div class="col-lg-4 col-sm-6 col-xs-6 mb-2"><input type="text" name="file_number" placeholder="File Number"></div>
-				<div class="col-lg-4 col-sm-6 col-xs-6 mb-2"><input type="text" name="reg_number" placeholder="Register Number"></div>
-				<div class="col-lg-4 col-sm-6 col-xs-6 mb-2"><input type="number" name="aadhar_number" placeholder="Aadhar Number"></div>
+				<div class="col-lg-6 col-sm-6 col-xs-12 mb-2">
+					<label for="perm_add" style="color:orange;">Permanent address:</label>
+					<textarea id="perm_add" style="width:100%;" name="perm_add" ></textarea>
+				</div>
+				<div class="col-lg-36 col-sm-6 col-xs-12 mb-2">
+					<label for="loc_add" style="color:orange;">Local address:</label>
+					<textarea id="loc_add" style="width:100%;" name="loc_add"></textarea>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-4 col-sm-6 col-xs-6 mb-2">
+					<label for="tehsil" style="color:orange;">Tehsil:</label>
+					<input id="tehsil" type="text" name="tehsil" >
+				</div>
+				<div class="col-lg-4 col-sm-6 col-xs-6 mb-2">
+					<label for="branch" style="color:orange;">Branch:</label>
+					<input id="branch" type="text" name="branch" >
+				</div>
+				<div class="col-lg-4 col-sm-6 col-xs-6 mb-2">
+					<label for="village" style="color:orange;">Village:</label>
+					<input id="village" type="text" name="village" >
+				</div>
+			</div>
+				<hr style="border:0.5px solid lightgrey">
+                <br>
+				<div class="row">
+					<div class="col-lg-4 col-sm-6 col-xs-6 mb-2">
+					<label for="mob_num" style="color:orange;">Mobile Number:</label>
+					<input id="mob_num" type="number" name="mob_num" >
+				</div>
+				<div class="col-lg-4 col-sm-6 col-xs-6 mb-2">
+					<label for="age" style="color:orange;">Age:</label>
+					<input id="age" type="number" name="age" >
+				</div>
+				<div class="col-lg-4 col-sm-6 col-xs-6 mb-2">
+					<label for="date_of_birth" style="color:orange;">Date of Birth:</label>
+					<input id="date_of_birth" type="date" name="date_of_birth">
+				</div>
 			</div>
 			<br>
-			<div class="row">
-				<div class="col-lg-3 col-sm-6 col-xs-6 mb-2">
-					<textarea style="width:100%;" name="perm_add" placeholder="Permanent Address"></textarea>
-				</div>
-				<div class="col-lg-3 col-sm-6 col-xs-6 mb-2">
-					<textarea style="width:100%;" name="loc_add" placeholder="Local Address"></textarea>
-				</div>
-				<div class="col-lg-3 col-sm-6 col-xs-6 mb-2">
-					<input type="text" name="tehsil" placeholder="Tehsil">
-				</div>
-				<div class="col-lg-3 col-sm-6 col-xs-6 mb-2">
-					<input type="text" name="branch" placeholder="Branch">
-				</div>
-			</div>
-			<br>
-			<div class="row">
-				<div class="col-lg-3 col-sm-6 col-xs-6 mb-2"><input type="text" name="village" placeholder="village"></div>
-				<div class="col-lg-3 col-sm-6 col-xs-6 mb-2">
-					<input type="number" name="mob_num" placeholder="Mobile Number">
-				</div>
-				<div class="col-lg-3 col-sm-6 col-xs-6 mb-2"><input type="number" name="age" placeholder="Age">
-				</div>
-				<div class="col-lg-3 col-sm-6 col-xs-6 mb-2">Date of Birth<input type="date" name="date_of_birth"></div>
-			</div>
+			<hr style="border:0.5px solid lightgrey">
 			<div class="row" style="display: none;">
 				<div class="col-lg-6">
 					<input type="text" name="lat" id="lat">
@@ -126,9 +167,9 @@ $_SESSION['file_error'] = 0;
 			</div>
 			<br>
 			<br>
-			<h4>You can submit or fill up other parts</h4>
-				<button class="btn btn-primary" value="Submit">Submit</button>
-				<br>
+			<h3 style="color:white;">You can submit or fill up other parts</h3>
+				<button class="btn btn-primary" value="Submit" style="margin:0 50%;padding: 10px 30px;">Submit</button>
+				<br> 
 				<br>
 	</div>
 	<!-- Part 1 Ends -->
