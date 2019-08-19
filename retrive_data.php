@@ -255,7 +255,7 @@ input
 			inputClass: 'form-control input-sm',
 			columns: {
         identifier: [0, 'id'],
-        editable: [[1, 'name'], [3, 'branch'], [4, 'file_number'], [5, '']]
+        editable: [[1, 'name'], [3, 'branch'], [4, 'file_number']]
 		    },
 			buttons: {
 			    edit: {
