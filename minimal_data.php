@@ -114,10 +114,6 @@ input
 <?php 
 		}
 	}
-	else
-	{
-		echo "No data found";
-	}
  ?>	
 		</tbody>
  	</table>
@@ -134,10 +130,7 @@ input
 	$(document).ready(function()
 	{
 
-		var table = $('#table_id').DataTable({
-			/*responsive:true,
-			scrollY:true,*/
-		});
+		var table = $('#table_id').DataTable();
 		$('input').on("focus",function()
 		{
 			$(this).addClass('hover');
@@ -146,75 +139,5 @@ input
 		{
 			$(this).removeClass('hover');
 		});
-		/*$('#table_id').Tabledit({
-			inputClass: 'form-control input-sm',
-			columns: {
-        identifier: [0, 'id'],
-        editable: [[1, 'name'], [2, 'branch'], [3, 'file_number'], [4, '']]
-		    },
-			buttons: {
-			    edit: {
-			        class: 'btn btn-sm btn-primary',
-			        html: '<span class="glyphicon glyphicon-pencil"></span>',
-			        action: 'edit'
-			    },
-			    delete: {
-			        class: 'btn btn-sm btn-info',
-			        html: '<span class="glyphicon glyphicon-trash"></span>',
-			        action: 'delete'
-			    },
-			    save: {
-			        class: 'btn btn-sm btn-success',
-			        html: 'Save'
-			    },
-			    restore: {
-			        class: 'btn btn-sm btn-warning',
-			        html: 'Restore',
-			        action: 'restore'
-			    },
-			    confirm: {
-			        class: 'btn btn-sm btn-danger',
-			        html: 'Confirm'
-			    }
-			},
-		    onDraw: function() {
-		        console.log('onDraw()');
-		    },
-		    onSuccess: function(data, textStatus, jqXHR) {
-		        console.log('onSuccess(data, textStatus, jqXHR)');
-		        console.log(data);
-		        console.log(textStatus);
-		        console.log(jqXHR);
-		    },
-		    onFail: function(jqXHR, textStatus, errorThrown) {
-		        console.log('onFail(jqXHR, textStatus, errorThrown)');
-		        console.log(jqXHR);
-		        console.log(textStatus);
-		        console.log(errorThrown);
-		    },
-		    onAlways: function() {
-		        console.log('onAlways()');
-		    },
-		    onAjax: function(action, serialize) {
-		        console.log('onAjax(action, serialize)');
-		        console.log(action);
-		        console.log(serialize);
-		        $.ajax({
-		            url: "data_manip.php",
-		            cache: false,
-		            method: "GET",
-		            data: serialize,
-		            success: function()
-		            {
-		                alert("Done");
-		            },
-		            error: function()
-		            {
-		            	alert("Didn't happen");
-		            }
-		        });
-		    }
-		});*/
-	});
 </script>
 </html>

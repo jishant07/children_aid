@@ -230,10 +230,6 @@ input
 <?php 
 		}
 	}
-	else
-	{
-		echo "No data found";
-	}
  ?>	
 		</tbody>
  	</table>
@@ -253,8 +249,7 @@ input
 			/*responsive:true,
 			scrollY:true,*/
 		});
-
-		/*$('#table_id').Tabledit({
+		$('#table_id').Tabledit({
 			inputClass: 'form-control input-sm',
 			columns: {
         identifier: [0, 'id'],
@@ -322,7 +317,7 @@ input
 		            }
 		        });
 		    }
-		});*/
+		});
 	});
 </script>
 </html>
