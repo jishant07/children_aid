@@ -11,20 +11,47 @@ session_start();
  ?>
 <?php include './partials/header.php'; ?>
 <style type="text/css">
-	table{
-  max-width: none;
-}
 body
 {
-	background: #03fcf0;
+	background: url(https://images.unsplash.com/photo-1565043534407-83e019d5f1c4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1402&q=80);
 }
 .container
 {
 	width: 80% !important;
 	margin: 50px auto;
+	background: rgba(242,184,97,0.7);
+	padding:30px;
+	border-radius: 10px;
+}
+th
+{
+	border:2px solid rgba(242,184,97) !important;
+}
+.table
+{
+	border-radius:10px;
+	-webkit-box-shadow: 0px 0px 20px 2px rgba(0,0,0,0.5);
+	-moz-box-shadow: 0px 0px 20px 2px rgba(0,0,0,0.5);
+	box-shadow: 0px 0px 20px 2px rgba(0,0,0,0.5);
+	background: white;
+}
+input
+{
+	-webkit-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.5);
+	-moz-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.5);
+	box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.5);
+	border-radius: 10px;
+	margin-bottom: 20px;
+}
+.hover
+{
+	border:2px solid orange;
+	-webkit-box-shadow: 0px 0px 35px 2px rgba(0,0,0,0.5);
+	-moz-box-shadow: 0px 0px 35px 2px rgba(0,0,0,0.5);
+	box-shadow: 0px 0px 35px 2px rgba(0,0,0,0.5);
+	transition: 0.3s;
 }
 </style>
-<div style="padding: 30px;padding-bottom:10px;background:#f4623a;" class="fixed-top"></div>
 <br>
 <div class="container">
 	<table id="table_id" class="table table-responsive table-hover table-bordered table-stripped bg-light">
@@ -213,7 +240,6 @@ body
  </div>
  <br>
  <br>
- <div style="padding: 30px;padding-bottom:10px;margin-top:20px !important;background:#f4623a;" class="fixed-bottom"></div>
 </body>
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
