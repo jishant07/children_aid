@@ -12,6 +12,10 @@
 ?>
 <?php include './partials/header.php'; ?>
 <style type="text/css">
+*
+{
+	font-style: Merriweather;
+}
 body
 {
 	background: url(https://images.unsplash.com/photo-1565043534407-83e019d5f1c4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1402&q=80);

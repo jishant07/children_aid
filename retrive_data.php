@@ -11,6 +11,10 @@ session_start();
  ?>
 <?php include './partials/header.php'; ?>
 <style type="text/css">
+*
+{
+	font-style: Merriweather;
+}
 body
 {
 	background: url(https://images.unsplash.com/photo-1565043534407-83e019d5f1c4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1402&q=80);
@@ -122,7 +126,7 @@ input
         	$count++;
 ?>
 	<tr>
-		<td> <?php echo (!$count ? "NA" : $count)  ?> </td>
+		<td> <?php echo $row['id'];  ?> </td>
 		<td> <?php echo (!$res['name'] ? "NA" : $res['name']) ?> </td>
 		<td> <img src=" <?php echo $row['photo_link']; ?> " alt="Image of the Child" height="200" width="200"> </td>
 		<td> <?php echo (!$res['branch'] ? "NA" : $res['branch']) ?> </td>
@@ -238,6 +242,7 @@ input
  <br>
 </body>
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="includes/jquery.tabledit.js"></script>
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
 <script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
 <script type="text/javascript" src="./jquery.tabledit.js"></script>
@@ -245,15 +250,12 @@ input
 	$(document).ready(function()
 	{
 
-		var table = $('#table_id').DataTable({
-			/*responsive:true,
-			scrollY:true,*/
-		});
+		var table = $('#table_id').DataTable();
 		$('#table_id').Tabledit({
 			inputClass: 'form-control input-sm',
 			columns: {
         identifier: [0, 'id'],
-        editable: [[1, 'name'], [2, 'branch'], [3, 'file_number'], [4, '']]
+        editable: [[1, 'name'], [3, 'branch'], [4, 'file_number'], [5, '']]
 		    },
 			buttons: {
 			    edit: {
