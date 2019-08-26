@@ -3,17 +3,8 @@
 	require("./partials/database_credentials.php");
 	$sql_count = "select * from `children_data` order by `id` desc";
 	$result = $con -> query($sql_count);
-	$i = 0;
-	$prev_id = 0;
-	if($result->num_rows)
-	{
-		while(($row = $result->fetch_assoc()) && ($i<1))
-		{
-			$prev_id = $row['id'];
-			$i++;
-		}
-	}
-	$new_id = $prev_id + 1;
+	$row = mysqli_num_rows ($result);
+	$new_id = $row + 1;
 	if (!empty($_FILES['child_photo']))
 	{
 		if (($_FILES['child_photo']['type'] == 'image/jpeg') || ($_FILES['child_photo']['type'] == 'image/jpg') || ($_FILES['child_photo']['type'] == 'image/png')) 
