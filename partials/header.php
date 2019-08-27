@@ -32,10 +32,6 @@
 		width:100%;
 		padding:10px;
 	}
-	.container
-	{
-		width:80% !important;
-	}
 	a
 	{
 		margin:20px;

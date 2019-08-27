@@ -19,9 +19,8 @@ body
 {
 	background: url(https://images.unsplash.com/photo-1565043534407-83e019d5f1c4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1402&q=80);
 }
-.container
+.container-fluid
 {
-	width: 80% !important;
 	margin: 50px auto;
 	background: rgba(242,184,97,0.7);
 	padding:30px;
@@ -57,7 +56,7 @@ input
 }
 </style>
 <br>
-<div class="container">
+<div class="container-fluid">
 	<table id="table_id" class="table table-responsive table-hover table-bordered table-stripped bg-light">
 		<thead>
 			<tr>
@@ -245,13 +244,11 @@ input
 <script type="text/javascript" src="includes/jquery.tabledit.js"></script>
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
 <script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
-<script type="text/javascript" src="./jquery.tabledit.js"></script>
 <script type="text/javascript">
 	$(document).ready(function()
 	{
-
-		var table = $('#table_id').DataTable();
-		$('#table_id').Tabledit({
+		$('#table_id').DataTable();
+		/*$('#table_id').Tabledit({
 			inputClass: 'form-control input-sm',
 			columns: {
         identifier: [0, 'id'],
@@ -319,7 +316,7 @@ input
 		            }
 		        });
 		    }
-		});
+		});*/
 	});
 </script>
 </html>
