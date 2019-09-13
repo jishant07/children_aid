@@ -14,7 +14,7 @@ session_start();
  	<script type="text/javascript">
  		alert("The Data was added");
  	</script>
- <?php }
+ <?php $_SESSION['is_success'] = 0;}
  else
  {
 
