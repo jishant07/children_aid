@@ -9,6 +9,12 @@ session_start();
   header("Location: login.php");
  }
  ?>
+ <?php if($_SESSION['is_success'])
+ { ?>
+ 	<script type="text/javascript">
+ 		alert("The Data was added");
+ 	</script>
+ <?php } ?>
 <?php include './partials/header.php'; ?>
 <style type="text/css">
 *

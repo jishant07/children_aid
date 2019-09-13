@@ -144,7 +144,14 @@ else
 
             <div class="col-lg-4 col-sm-4 col-xs-12 mb-2"  >
                 <label for="Branch" style="color:orange;">Branch:</label>
-                <input id="Branch" type="text" name="branch" style="background-color:rgb(250, 239, 207);"  >
+                <!-- <input id="Branch" type="text" name="branch" style="background-color:rgb(250, 239, 207);"  > -->
+                <select name="branch">
+                	<option disabled selected>Select Branch</option>
+                	<option value="Dadar">Dadar</option>
+                	<option value="Mahim">Mahim</option>
+                	<option value="Mankhurd">Mankhurd</option>
+                	<option value="Umerkhadi">Umerkhadi</option>
+                </select>
             </div>
 
             <div class="col-lg-4 col-sm-4 col-xs-12 mb-2"  >

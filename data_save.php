@@ -18,6 +18,7 @@
 				$sql = "insert into `children_data`(`added_data`,`photo_link`) values ('$data','$target_file');";
 				$con -> query($sql);
 				$_SESSION['file_error'] = 0;
+				$_SESSION['is_success'] = 1;
 				header("Location: retrive_data.php");
 			}
 			else
