@@ -145,7 +145,7 @@ else
             <div class="col-lg-4 col-sm-4 col-xs-12 mb-2"  >
                 <label for="Branch" style="color:orange;">Branch:</label>
                 <!-- <input id="Branch" type="text" name="branch" style="background-color:rgb(250, 239, 207);"  > -->
-                <select name="branch">
+                <select name="branch" style="background-color:rgb(250, 239, 207);">
                 	<option disabled selected>Select Branch</option>
                 	<option value="Dadar">Dadar</option>
                 	<option value="Mahim">Mahim</option>
@@ -241,13 +241,12 @@ else
 			<div class="row">
 				<div class="col-lg-3 col-sm-6 col-xs-12 mb-2">
 					   <label for="Height"  style="color:orange;">Height:</label>
-					   <input id="Height" type="number" name="height" style="background-color:rgb(250, 239, 207);">
+					   <input id="Height" type="text" name="height" style="background-color:rgb(250, 239, 207);">
 				    </div>
 				    <div class="col-lg-3 col-sm-6 col-xs-12 mb-2">
 				        <label for="Wight"  style="color:orange;">Weight:</label>
-					    <input id="Weight"type="number" name="weight" style="background-color:rgb(250, 239, 207);" >
+					    <input id="Weight" type="text" name="weight" style="background-color:rgb(250, 239, 207);" >
 					</div>
-				
 				
 				
 					<div class="col-lg-3 col-sm-6 col-xs-12 mb-2">

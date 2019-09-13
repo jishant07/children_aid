@@ -9,12 +9,16 @@ session_start();
   header("Location: login.php");
  }
  ?>
- <?php if($_SESSION['is_success'])
+ <?php if(isset($_SESSION['is_success']) && $_SESSION['is_success'])
  { ?>
  	<script type="text/javascript">
  		alert("The Data was added");
  	</script>
- <?php } ?>
+ <?php }
+ else
+ {
+
+ } ?>
 <?php include './partials/header.php'; ?>
 <style type="text/css">
 *
@@ -134,7 +138,7 @@ input
 		<td> <?php echo $row['id'];  ?> </td>
 		<td> <?php echo (!$res['name'] ? "NA" : $res['name']) ?> </td>
 		<td> <img src=" <?php echo $row['photo_link']; ?> " alt="Image of the Child" height="200" width="200"> </td>
-		<td> <?php echo (!$res['branch'] ? "NA" : $res['branch']) ?> </td>
+		<td> <?php echo (!isset(($res['branch'])) ? "NA" : $res['branch']) ?> </td>
 		<td> <?php echo (!$res['file_number'] ? "NA" : $res['file_number']) ?> </td>
 		<td> <?php echo (!$res['reg_number'] ? "NA" : $res['reg_number']) ?> </td>
 		<td> <?php echo (!$res['aadhar_number'] ? "NA" : $res['aadhar_number']) ?> </td>
