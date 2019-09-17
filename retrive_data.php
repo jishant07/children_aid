@@ -87,34 +87,16 @@ input
 				<th>Height</th>
 				<th>Weight</th>
 				<th>Chest</th>
-				<th>Complextion</th>
 				<th>Eye Color</th>
-				<th>Nose Type</th>
 				<th>Hair</th>
-				<th>Number of Teeth</th>
-				<th>Lip Type</th>
-				<th>General Condition</th>
-				<th>Religion</th>
-				<th>Caste</th>
-				<th>Mother Tongue</th>
-				<th>Other Languages</th>
-				<th>Socio Economic Class</th>
-				<th>Literacy Level</th>
-				<th>Previous School</th>
 				<th>Children Court</th>
 				<th>Case Number</th>
 				<th>Case Handler</th>
 				<th>Section Referral</th>
-				<th>Status</th>
-				<th>Date of Custody</th>
 				<th>Date of Admission</th>
-				<th>Repeater Status</th>
 				<th>Date of Discharge</th>
-				<th>Previous Institution</th>
-				<th>Medical</th>
-				<th>Psychological</th>
-				<th>Psychiatric</th>
-				<th>Nature and Date of Disposal</th>
+				<th>Father Name</th>
+				<th>Mother Name</th>
 				<th>Observation</th>
 				<th>Present Problem</th>
 				<th>Aggravating Circumstances</th>
@@ -123,122 +105,48 @@ input
 		<tbody>
 <?php 
 	require("./partials/database_credentials.php");
-	$sql = "select * from children_data";
+	$sql = "select * from registration";
 	$result = $con->query($sql);
 	$count = 0;
 	if($result->num_rows > 0)
 	{
 		while($row = $result->fetch_assoc()) 
 		{
-        	$test = $row["added_data"];
-        	$res = json_decode($test,true);
+        	//$test = $row["added_data"];
+        	//$row = json_decode($test,true);
         	$count++;
 ?>
 	<tr>
 		<td> <?php echo $row['id'];  ?> </td>
-		<td> <?php echo (!$res['name'] ? "NA" : $res['name']) ?> </td>
-		<td> <img src=" <?php echo $row['photo_link']; ?> " alt="Image of the Child" height="200" width="200"> </td>
-		<td> <?php echo (!isset(($res['branch'])) ? "NA" : $res['branch']) ?> </td>
-		<td> <?php echo (!$res['file_number'] ? "NA" : $res['file_number']) ?> </td>
-		<td> <?php echo (!$res['reg_number'] ? "NA" : $res['reg_number']) ?> </td>
-		<td> <?php echo (!$res['aadhar_number'] ? "NA" : $res['aadhar_number']) ?> </td>
-		<td> <?php echo (!$res['perm_add'] ? "NA" : $res['perm_add']) ?> </td>
- 		<td> <?php echo (!$res['loc_add'] ? "NA" : $res['loc_add']) ?> </td>
-		<td> <?php echo (!$res['tehsil'] ? "NA" : $res['tehsil']) ?> </td>
-		<td> <?php echo (!$res['village'] ? "NA" : $res['village']) ?> </td>
-		<td> <?php echo (!$res['mob_num'] ? "NA" : $res['mob_num']) ?> </td>
-		<td> <?php echo (!$res['age'] ? "NA" : $res['age']) ?> </td>
-		<td> <?php echo (!$res['date_of_birth'] ? "NA" : $res['date_of_birth']) ?> </td>
-		<td> <?php echo (!$res['height'] ? "NA" : $res['height']) ?> </td>
-		<td> <?php echo (!$res['weight'] ? "NA" : $res['weight']) ?> </td>
-		<td> <?php echo (!$res['chest'] ? "NA" : $res['chest']) ?> </td>
-		<td> <?php echo (!$res['comp'] ? "NA" : $res['comp']) ?> </td>
-		<td> <?php echo (!isset($res['eye_color']) ? "NA" : $res['eye_color']) ?> </td>
-		<td> <?php echo (!isset($res['nose_type']) ? "NA" : $res['nose_type']) ?> </td>
-		<td> <?php echo (!$res['hair'] ? "NA" : $res['hair']) ?> </td>
-		<td> <?php echo (!$res['teeth'] ? "NA" : $res['teeth']) ?> </td>
-		<td> <?php echo (!isset($res['lip_type']) ? "NA" : $res['lip_type']) ?> </td>
-		<td> <?php echo (!$res['general_condition'] ? "NA" : $res['general_condition']) ?> </td>
-		<td> <?php echo (!$res['religion'] ? "NA" : $res['religion']) ?> </td>
-		<td> <?php echo (!$res['caste'] ? "NA" : $res['caste']) ?> </td>
-		<td> <?php echo (!$res['mother_tongue'] ? "NA" : $res['mother_tongue']) ?> </td>
-		<td> 
-			<?php 
-				if(!empty($res['other_languages']))
-				{
-					for($i=0;$i <count($res['other_languages']); $i++) 
-					{ 
-						echo "<li>".$res['other_languages'][$i]."</li>";
-					}
-				}
-				else
-				{
-					echo "NA";
-				}
-			?>
-		</td>
-		<td> <?php echo (!$res['socio_economic_class'] ? "NA" : $res['socio_economic_class']) ?> </td>
-		<td> <?php echo (!isset($res['lit_level']) ? "NA" : $res['lit_level']) ?> </td>
-		<td> <?php echo (!$res['prev_school'] ? "NA" : $res['prev_school']) ?> </td>
-		<td> <?php echo (!$res['child_court'] ? "NA" : $res['child_court']) ?> </td>
-		<td> <?php echo (!$res['case_no'] ? "NA" : $res['case_no']) ?> </td>
-		<td> <?php echo (!$res['case_handler'] ? "NA" : $res['case_handler']) ?> </td>
-		<td> <?php echo (!$res['section_referral'] ? "NA" : $res['section_referral']) ?> </td>
-		<td> <?php echo (!isset($res['status']) ? "NA" : $res['status']) ?> </td>
-		<td> <?php echo (!$res['date_of_custody'] ? "NA" : $res['date_of_custody']) ?> </td>
-		<td> <?php echo (!$res['date_of_admission'] ? "NA" : $res['date_of_admission']) ?> </td>
-		<td> <?php echo (!isset($res['is_repeater']) ? "NA" : $res['is_repeater']) ?> </td>
-		<td> <?php echo (!$res['date_of_discharge'] ? "NA" : $res['date_of_discharge']) ?> </td>
-		<td> <?php echo (!$res['prev_institution'] ? "NA" : $res['prev_institution']) ?> </td>
-		<td> 
-			<?php 
-				if(!empty($res['medical']))
-				{
-					for($i=0;$i <count($res['medical']); $i++) 
-					{ 
-						echo "<li>".$res['medical'][$i]."</li>";
-					}
-				}
-				else
-				{
-					echo "NA";
-				}
-			?>
-		</td>
-		<td> 
-			<?php 
-				if(!empty($res['psychological']))
-				{
-					for($i=0;$i <count($res['psychological']); $i++) 
-					{ 
-						echo "<li>".$res['psychological'][$i]."</li>";
-					}
-				}
-				else
-				{
-					echo "NA";
-				}
-			?>
-		</td>
-		<td> 
-			<?php 
-				if(!empty($res['psychiatric']))
-				{
-					for($i=0;$i <count($res['psychiatric']); $i++) 
-					{ 
-						echo "<li>".$res['psychiatric'][$i]."</li>";
-					}
-				}
-				else
-				{
-					echo "NA";
-				}
-			?>
-		</td>
-		<td> <?php echo (!$res['nature_dod'] ? "NA" : $res['nature_dod']) ?> </td>
-		<td> <?php echo (!$res['observation'] ? "NA" : $res['observation']) ?> </td>
-		<td> <?php echo (!$res['pre_problem'] ? "NA" : $res['pre_problem']) ?> </td>
-		<td> <?php echo (!$res['agg_cir'] ? "NA" : $res['agg_cir']) ?> </td>
+		<td> <?php echo (!$row['NameJuvenile'] ? "NA" : $row['NameJuvenile']) ?> </td>
+		<td> <img src=" <?php echo "pimage/".$row['pimage']; ?> " alt="Image of the Child" height="200" width="200"> </td>
+		<td> <?php echo (!isset(($row['dept_id'])) ? "NA" : $row['dept_id']) ?> </td>
+		<td> <?php echo (!$row['fileNo'] ? "NA" : $row['fileNo']) ?> </td>
+		<td> <?php echo (!$row['missingChildNo'] ? "NA" : $row['missingChildNo']) ?> </td>
+		<td> <?php echo (!$row['adharCardNo'] ? "NA" : $row['adharCardNo']) ?> </td>
+		<td> <?php echo (!$row['permentaddress'] ? "NA" : $row['permentaddress']) ?> </td>
+ 		<td> <?php echo (!$row['localaddress'] ? "NA" : $row['localaddress']) ?> </td>
+		<td> <?php echo (!$row['Tashil'] ? "NA" : $row['Tashil']) ?> </td>
+		<td> <?php echo (!$row['village'] ? "NA" : $row['village']) ?> </td>
+		<td> <?php echo (!$row['mobileNo'] ? "NA" : $row['mobileNo']) ?> </td>
+		<td> <?php echo (!$row['age'] ? "NA" : $row['age']) ?> </td>
+		<td> <?php echo (!$row['dateofbirth'] ? "NA" : $row['dateofbirth']) ?> </td>
+		<td> <?php echo (!$row['hight'] ? "NA" : $row['hight']) ?> </td>
+		<td> <?php echo (!$row['waight'] ? "NA" : $row['waight']) ?> </td>
+		<td> <?php echo (!$row['chest'] ? "NA" : $row['chest']) ?> </td>
+		<td> <?php echo (!isset($row['eyes']) ? "NA" : $row['eyes']) ?> </td>
+		<td> <?php echo (!$row['hair'] ? "NA" : $row['hair']) ?> </td>
+		<td> <?php echo (!$row['childrenCourt'] ? "NA" : $row['childrenCourt']) ?> </td>
+		<td> <?php echo (!$row['caseNo'] ? "NA" : $row['caseNo']) ?> </td>
+		<td> <?php echo (!$row['PoliceSatation'] ? "NA" : $row['PoliceSatation']) ?> </td>
+		<td> <?php echo (!$row['FIR'] ? "NA" : $row['FIR']) ?> </td>
+		<td> <?php echo (!$row['dateAdmission'] ? "NA" : $row['dateAdmission']) ?> </td>
+		<td> <?php echo (!$row['datedischarge'] ? "NA" : $row['datedischarge']) ?> </td>
+		<td> <?php echo (!$row['fatherName'] ? "NA" : $row['fatherName']) ?> </td>
+		<td> <?php echo (!$row['motherName'] ? "NA" : $row['motherName']) ?> </td>
+		<td> <?php echo (!$row['observation'] ? "NA" : $row['observation']) ?> </td>
+		<td> <?php echo (!$row['persentProblem'] ? "NA" : $row['persentProblem']) ?> </td>
+		<td> <?php echo (!$row['AggarvatingCircumstances'] ? "NA" : $row['AggarvatingCircumstances']) ?> </td>
 	</tr>
 <?php 
 		}
