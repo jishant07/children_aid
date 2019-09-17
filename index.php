@@ -34,7 +34,7 @@ session_start();
 
   <!-- Theme CSS - Includes Bootstrap -->
   <link href="css/creative.min.css" rel="stylesheet">
-
+  
 </head>
 
 <body id="page-top">
@@ -42,7 +42,7 @@ session_start();
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
     <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top">Children's Aid Society</a>
+      <a class="navbar-brand js-scroll-trigger" id="logo" href="#page-top"></a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -60,9 +60,9 @@ session_start();
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#contact">Contact Us</a>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="gallery.php">Gallery</a>
-          </li>
+          </li> -->
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="logout.php">Logout!</a>
           </li>
@@ -76,7 +76,7 @@ session_start();
     <div class="container h-100">
       <div class="row h-100 align-items-center justify-content-center text-center">
         <div class="col-lg-10 align-self-end">
-          <h1 class="text-uppercase text-white font-weight-bold">Children's Aid Society</h1>
+          <h1 class="text-uppercase text-white font-weight-bold"><img src="logo.jpg"></h1>
           <hr class="divider my-4">
         </div>
         <div class="col-lg-8 align-self-baseline">
@@ -100,14 +100,19 @@ session_start();
           </div>
         </div>
         <div class='row' style='text-align:center;margin:auto;'>
-        <div class='col-lg-6'>
+        <div class='col-lg-4'>
           <a class='btn btn-light btn-xl js-scroll-trigger mb-2' href='data_form.php'>
             Inform about a child
           </a>
         </div>
-        <div class='col-lg-6'>
+        <div class='col-lg-4'>
             <a class='btn btn-light btn-xl js-scroll-trigger mb-2' href='retrive_data.php'>
               Search/See the children
+            </a>
+        </div>
+        <div class='col-lg-4'>
+            <a class='btn btn-light btn-xl js-scroll-trigger mb-2' href='minimal_data.php'>
+              Search/See the Posted Children
             </a>
         </div>
         </div>
@@ -126,16 +131,51 @@ session_start();
       </div>
     </div>
     <div class='row' style='text-align:center;margin:auto;'>
-    <div class='col-lg-12'>
+    <div class='col-lg-6'>
       <a class='btn btn-light btn-xl js-scroll-trigger mb-2' href='retrive_data.php'>
         Search/See the children
       </a>
     </div>
+    <div class='col-lg-6'>
+            <a class='btn btn-light btn-xl js-scroll-trigger mb-2' href='minimal_data.php'>
+              Search/See the Posted Children
+            </a>
+        </div>
     </div>
   </section>";
     }
   ?>
-  
+  <section>
+    <div id="portfolio" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="./img/portfolio/fullsize/1.jpg" alt="First slide" style="max-height: 500px;">
+      <div class="carousel-caption d-none d-md-block">
+        <h4>Item 1</h4>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="./img/portfolio/fullsize/2.jpg" alt="Second slide" style="max-height: 500px;">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="./img/portfolio/fullsize/3.jpg" alt="Third slide" style="max-height: 500px;">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+  </section>
 
   <!-- Services Section -->
   <section class="page-section" id="services">
@@ -260,37 +300,7 @@ session_start();
       </div>
     </div>
   </section> -->
-  <section>
-    <div id="portfolio" class="carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-  </ol>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img class="d-block w-100" src="./img/portfolio/fullsize/1.jpg" alt="First slide" style="max-height: 500px;">
-      <div class="carousel-caption d-none d-md-block">
-        <h4>Item 1</h4>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="./img/portfolio/fullsize/2.jpg" alt="Second slide" style="max-height: 500px;">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="./img/portfolio/fullsize/3.jpg" alt="Third slide" style="max-height: 500px;">
-    </div>
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
-  </section>
+  
 
   <!-- Contact Section -->
   <section class="page-section" id="contact">
@@ -327,11 +337,11 @@ session_start();
 
   <!-- Custom scripts for this template -->
   <script src="js/creative.min.js"></script>
-  <script type="text/javascript">
+  <!-- <script type="text/javascript">
     $('#portfolio').carousel({
       interval:500
     });
-  </script>
+  </script> -->
 </body>
 
 </html>
