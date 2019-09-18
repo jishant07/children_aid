@@ -100,6 +100,7 @@ input
 				<th>Observation</th>
 				<th>Present Problem</th>
 				<th>Aggravating Circumstances</th>
+				<th>PDF</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -120,7 +121,29 @@ input
 		<td> <?php echo $row['id'];  ?> </td>
 		<td> <?php echo (!$row['NameJuvenile'] ? "NA" : $row['NameJuvenile']) ?> </td>
 		<td> <img src=" <?php echo "pimage/".$row['pimage']; ?> " alt="Image of the Child" height="200" width="200"> </td>
-		<td> <?php echo (!isset(($row['dept_id'])) ? "NA" : $row['dept_id']) ?> </td>
+		<td> <?php 
+			if($row['dept_id'] == 0){
+				echo('N/A');
+			}
+			else if ($row['dept_id'] == 1){
+				echo("Chembur Children's Home");
+			}
+			else if ($row['dept_id'] == 2){
+				echo("Additional Children's Home");
+			}
+			else if ($row['dept_id'] == 3){
+				echo("Bal Kalyan Nagari");
+			}
+			else if ($row['dept_id'] == 4){
+				echo("David Sassoon Industrial School");
+			}
+			else if ($row['dept_id'] == 5){
+				echo("New Childrens Home");
+			}
+			else if ($row['dept_id'] == 6){
+				echo("Childrens Home");
+			}
+			 ?> </td>
 		<td> <?php echo (!$row['fileNo'] ? "NA" : $row['fileNo']) ?> </td>
 		<td> <?php echo (!$row['missingChildNo'] ? "NA" : $row['missingChildNo']) ?> </td>
 		<td> <?php echo (!$row['adharCardNo'] ? "NA" : $row['adharCardNo']) ?> </td>
@@ -147,6 +170,7 @@ input
 		<td> <?php echo (!$row['observation'] ? "NA" : $row['observation']) ?> </td>
 		<td> <?php echo (!$row['persentProblem'] ? "NA" : $row['persentProblem']) ?> </td>
 		<td> <?php echo (!$row['AggarvatingCircumstances'] ? "NA" : $row['AggarvatingCircumstances']) ?> </td>
+		<td> <a href = "createpdf.php?id=<?php echo $row['id'] ?>"> Generate PDF </a></td>
 	</tr>
 <?php 
 		}
