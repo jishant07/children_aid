@@ -42,7 +42,7 @@ session_start();
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
     <div class="container">
-      <a class="navbar-brand js-scroll-trigger" id="logo" href="#page-top"><img src="./img/cas-mumbai-logo-icon.jpg"></a>
+      <a class="navbar-brand js-scroll-trigger" id="logo" href="#page-top"><img src="./img/cas-mumbai-logo-icon.jpg" height="50px"></a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -175,14 +175,14 @@ session_start();
       <img class="d-block w-100" src="./img/6.jpg" alt="Third slide" style="max-height: 500px;">
     </div>
   </div>
-  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+  <!-- <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
   </a>
   <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
-  </a>
+  </a> -->
 </div>
   </section>
 
@@ -312,7 +312,7 @@ session_start();
   
 
   <!-- Contact Section -->
-  <section class="page-section" id="contact">
+  <section class="page-section" id="contact" style="background:#b0b5b1;">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-8 text-center">
@@ -346,11 +346,11 @@ session_start();
 
   <!-- Custom scripts for this template -->
   <script src="js/creative.min.js"></script>
-  <script type="text/javascript">
+  <!-- <script type="text/javascript">
     $('#portfolio').carousel({
       interval:1000
     });
-  </script>
+  </script> -->
 </body>
 
 </html>
