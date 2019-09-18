@@ -99,21 +99,7 @@ $_SESSION['file_error'] = 0;
 				<input id="name" type="text" name="name" >
 			</div>
 		</div>
-		<br>	
-		<div class="row">
-				<div class="col-lg-4 col-sm-6 col-xs-12 mb-2">
-					<label for="file_number" style="color:orange;">File number:</label>
-					<input id="file_number" type="text" name="file_number" >
-				</div>
-				<div class="col-lg-4 col-sm-6 col-xs-12 mb-2">
-					<label for="reg_number" style="color:orange;">Register number:</label>
-					<input id="reg_number" type="text" name="reg_number" >
-				</div>
-				<div class="col-lg-4 col-sm-6 col-xs-12 mb-2">
-					<label for="aadhar_number" style="color:orange;">Aadhar number:</label>
-					<input type="number" name="aadhar_number">
-				</div>
-		</div>
+		<br>
 			<br>
 			<hr style="border:0.5px solid lightgrey">
 			<div class="row">

@@ -67,9 +67,6 @@ input
 				<th>Name</th>
 				<th>Photo</th>
 				<th>Branch</th>
-				<th>File Number</th>
-				<th>Register Number</th>
-				<th>Aadhaar Number</th>
 				<th>Permanent Address</th>
 				<th>Local Address</th>
 				<th>Tehsil</th>
@@ -101,9 +98,6 @@ input
 			<img src="<?php if(!empty($row['photo_link'])){echo $row['photo_link'];}else{echo "img/default.jpg";} ?>" alt="No image here" height="200" width="200">
 		</td>
 		<td> <?php echo (!$res['branch'] ? "NA" : $res['branch']) ?> </td>
-		<td> <?php echo (!$res['file_number'] ? "NA" : $res['file_number']) ?> </td>
-		<td> <?php echo (!$res['reg_number'] ? "NA" : $res['reg_number']) ?> </td>
-		<td> <?php echo (!$res['aadhar_number'] ? "NA" : $res['aadhar_number']) ?> </td>
 		<td> <?php echo (!$res['perm_add'] ? "NA" : $res['perm_add']) ?> </td>
  		<td> <?php echo (!$res['loc_add'] ? "NA" : $res['loc_add']) ?> </td>
 		<td> <?php echo (!$res['tehsil'] ? "NA" : $res['tehsil']) ?> </td>

@@ -42,7 +42,7 @@ session_start();
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
     <div class="container">
-      <a class="navbar-brand js-scroll-trigger" id="logo" href="#page-top"></a>
+      <a class="navbar-brand js-scroll-trigger" id="logo" href="#page-top"><img src="./img/cas-mumbai-logo.jpg"></a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -107,12 +107,12 @@ session_start();
         </div>
         <div class='col-lg-4'>
             <a class='btn btn-light btn-xl js-scroll-trigger mb-2' href='retrive_data.php'>
-              Search/See the children
+              Registered Children
             </a>
         </div>
         <div class='col-lg-4'>
             <a class='btn btn-light btn-xl js-scroll-trigger mb-2' href='minimal_data.php'>
-              Search/See the Posted Children
+              Unattended Children
             </a>
         </div>
         </div>
@@ -133,12 +133,12 @@ session_start();
     <div class='row' style='text-align:center;margin:auto;'>
     <div class='col-lg-6'>
       <a class='btn btn-light btn-xl js-scroll-trigger mb-2' href='retrive_data.php'>
-        Search/See the children
+        Registered Children
       </a>
     </div>
     <div class='col-lg-6'>
             <a class='btn btn-light btn-xl js-scroll-trigger mb-2' href='minimal_data.php'>
-              Search/See the Posted Children
+              Unattended Children
             </a>
         </div>
     </div>
@@ -151,19 +151,28 @@ session_start();
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="d-block w-100" src="./img/portfolio/fullsize/1.jpg" alt="First slide" style="max-height: 500px;">
-      <div class="carousel-caption d-none d-md-block">
-        <h4>Item 1</h4>
-      </div>
+      <img class="d-block w-100" src="./img/1.jpg" alt="First slide" style="max-height: 500px;">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="./img/portfolio/fullsize/2.jpg" alt="Second slide" style="max-height: 500px;">
+      <img class="d-block w-100" src="./img/2.jpg" alt="Second slide" style="max-height: 500px;">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="./img/portfolio/fullsize/3.jpg" alt="Third slide" style="max-height: 500px;">
+      <img class="d-block w-100" src="./img/3.jpg" alt="Third slide" style="max-height: 500px;">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="./img/4.jpg" alt="Third slide" style="max-height: 500px;">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="./img/5.jpg" alt="Third slide" style="max-height: 500px;">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="./img/6.jpg" alt="Third slide" style="max-height: 500px;">
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -337,11 +346,11 @@ session_start();
 
   <!-- Custom scripts for this template -->
   <script src="js/creative.min.js"></script>
-  <!-- <script type="text/javascript">
+  <script type="text/javascript">
     $('#portfolio').carousel({
-      interval:500
+      interval:1000
     });
-  </script> -->
+  </script>
 </body>
 
 </html>
