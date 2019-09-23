@@ -17,29 +17,30 @@
 				move_uploaded_file($_FILES['child_photo']['tmp_name'], $target_file);
 				extract($_POST);
 				$sql = "INSERT INTO `registration`(`pimage`, `NameJuvenile`, `fileNo`, `missingChildNo`, `adharCardNo`, `localaddress`, `permentaddress`, `village`, `postofffice`, `taluka`, `Tashil`, `District`, `state`, `mobileNo`, `age`, `dateofbirth`, `hight`, `waight`, `chest`, `eyes`, `hair`, `childrenCourt`, `caseNo`, `PoliceSatation`, `FIR`, `dateAdmission`, `datedischarge`, `fatherName`, `motherName`, `observation`, `persentProblem`, `AggarvatingCircumstances`, `dept_id`) VALUES ('$image_name','$NameJuvenile','$fileNo','$missingChildNo','$adharCardNo','$localaddress','$permentaddress','$village','$postofffice','$taluka','$Tashil','$District','$state','$mobileNo','$age','$dateofbirth','$hight','$waight','$chest','$eyes','$hair','$childrenCourt','$caseNo','$PoliceSatation','$FIR','$dateAdmission','$datedischarge','$fatherName','$motherName','$observation','$persentProblem','$AggarvatingCircumstances','$dept_id')";
+				echo $sql;
 				$con -> query($sql);
 				$_SESSION['file_error'] = 0;
-				$_SESSION['is_success'] = 1;
-				header("Location: retrive_data.php");
+				$test_sql = "select * from registration";
+				$test_result = $con->query($test_sql);
+				if($test_result->num_rows == $new_id)
+				{$_SESSION['is_success'] = 1;}
+				header("Location: index.php");
 			}
 			else
 			{
 				$_SESSION['file_error'] = 1;
-				echo "SIZE ERROR";
 				header("Location: data_form.php");
 			}
 		}
 		else
 		{
 			$_SESSION['file_error'] = 1;
-			echo "TYPE ERROR";
 			header("Location: data_form.php");
 		}
 	}
 	else
 	{
 		$_SESSION['file_error'] = 1;
-		echo "FILE NOT EXIST";
 		header("Location: data_form.php");
 	}
 ?>

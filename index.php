@@ -9,7 +9,19 @@ session_start();
   header("Location: login.php");
  }
  ?>
+<?php 
 
+  if(isset($_SESSION['is_success']) && $_SESSION['is_success'])
+  {
+    ?>
+      <script type="text/javascript">
+        alert("Data added Successfully");
+      </script>
+    <?php
+    $_SESSION['is_success'] = 0;
+  }
+
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 
